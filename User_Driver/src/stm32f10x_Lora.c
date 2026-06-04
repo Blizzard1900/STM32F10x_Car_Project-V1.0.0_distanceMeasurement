@@ -3,7 +3,7 @@
   * @author  W.Dong
   * @version  V1.0.0
   * @date    23/01/2020
-  * @brief   LoraÄ£¿éÇý¶¯£¬µ÷ÓÃÎÄµµ£ºstm32f10x_scom.c
+  * @brief   Loraæ¨¡å—é©±åŠ¨ï¼Œè°ƒç”¨æ–‡æ¡£ï¼šstm32f10x_scom.c
   *****************************************************************************/
 	
 #include "stm32f10x_Lora.h"
@@ -29,23 +29,23 @@ void  Lora3_txCallbackFun(void);
   * @{
   */
 /* --------------------------- Lora Base ------------------------------ */
-//ÓÃÍ·ÎÄ¼þÉùÃ÷µÄ½á¹¹Ìå ¶¨Òå Í¨µÀ±äÁ¿£¬ÓÃÓÚ´æ´¢ËùÓÐÅäÖÃ£¬°üÀ¨Ó²¼þ ²ÎÊý
+//ç”¨å¤´æ–‡ä»¶å£°æ˜Žçš„ç»“æž„ä½“ å®šä¹‰ é€šé“å˜é‡ï¼Œç”¨äºŽå­˜å‚¨æ‰€æœ‰é…ç½®ï¼ŒåŒ…æ‹¬ç¡¬ä»¶ å‚æ•°
 Lora_Typedef_Struct       Lora1_BASE, Lora2_BASE, Lora3_BASE;
 
-/* --------------------------- ÖÐ¶Ï  ´æ´¢±äÁ¿ ------------------------- */
+/* --------------------------- ä¸­æ–­  å­˜å‚¨å˜é‡ ------------------------- */
 static  uint32_t          __Lora_CPU_PRIMASK_REG_SAVE_VALUE;
 
 
-/* --------------- ¹ØÖÐ¶Ïº¯Êý ÉùÃ÷-------------------- */
+/* --------------- å…³ä¸­æ–­å‡½æ•° å£°æ˜Ž-------------------- */
 static __INLINE void __Lora_Disable_IRQ(void);
-/* --------------- ¿ªÖÐ¶Ïº¯Êý ÉùÃ÷-------------------- */
+/* --------------- å¼€ä¸­æ–­å‡½æ•° å£°æ˜Ž-------------------- */
 static __INLINE void __Lora_Restore_IRQ(void);
 
 
 /*------------------- Lora_Private_Functions   ---------------**/
 
 /*****************************************************************
-  * @brief   ¹ØÖÐ¶Ï                                              *
+  * @brief   å…³ä¸­æ–­                                              *
   * @param   void                                                *
   * @retval  void                                                *
 *****************************************************************/
@@ -56,7 +56,7 @@ static __INLINE void __Lora_Disable_IRQ(void)
 }
 
 /*****************************************************************
-  * @brief   ¿ªÖÐ¶Ï                                              *
+  * @brief   å¼€ä¸­æ–­                                              *
   * @param   void                                                *
   * @retval  void                                                *
 *****************************************************************/
@@ -70,8 +70,8 @@ static __INLINE void __Lora_Restore_IRQ(void)
 /**-----------------       Lora_Exported_Functions     ---------------------------------**/
 
 /******************************************************************************
-* @brief  ÓÃÄ¬ÈÏ²ÎÊý³õÊ¼»¯Lora_Init_Struct                                    *                                                
-* @param  Lora_Init_Struct£ºÖ¸Ïò Lora_InitTypedef_StructÀàÐÍµÄ½á¹¹ÌåÊý¾Ý      *
+* @brief  ç”¨é»˜è®¤å‚æ•°åˆå§‹åŒ–Lora_Init_Struct                                    *                                                
+* @param  Lora_Init_Structï¼šæŒ‡å‘ Lora_InitTypedef_Structç±»åž‹çš„ç»“æž„ä½“æ•°æ®      *
 * @retval void.                                                               *
 ******************************************************************************/
 void Lora_StructInit(Lora_InitTypedef_Struct *Lora_Init_Struct)
@@ -100,9 +100,9 @@ void Lora_StructInit(Lora_InitTypedef_Struct *Lora_Init_Struct)
 }
 
 /******************************************************************************
-* @brief  ÓÃLora_Init_Struct ³õÊ¼»¯LoraÄ£¿é                                   *                                                
-* @param  Lorax£¬Ñ¡Ôñ³õÊ¼»¯µÄLoraÄ£¿é£¬x¿ÉÒÔÊÇ1µ½ 3                           *
-* @param  Lora_Init_Struct£º ³õÊ¼»¯µÄLora_InitTypeDef_Struct ½á¹¹Êý¾Ý         *
+* @brief  ç”¨Lora_Init_Struct åˆå§‹åŒ–Loraæ¨¡å—                                   *                                                
+* @param  Loraxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„Loraæ¨¡å—ï¼Œxå¯ä»¥æ˜¯1åˆ° 3                           *
+* @param  Lora_Init_Structï¼š åˆå§‹åŒ–çš„Lora_InitTypeDef_Struct ç»“æž„æ•°æ®         *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/
 ErrorStatus Lora_Init(Lora_Typedef_Struct* Lorax, Lora_InitTypedef_Struct *Lora_Init_Struct)
@@ -115,7 +115,7 @@ ErrorStatus Lora_Init(Lora_Typedef_Struct* Lorax, Lora_InitTypedef_Struct *Lora_
        return ERROR;
     }
 
-    //1.Ìî³ä Í¨µÀ±äÁ¿ Ó²¼þÉèÖÃ  
+    //1.å¡«å…… é€šé“å˜é‡ ç¡¬ä»¶è®¾ç½®  
     if(Lorax == Lora1)
 		{
         Lora1_BASE.LoraHardware.SCOMx        = Lora1_SCOMx ;
@@ -151,7 +151,7 @@ ErrorStatus Lora_Init(Lora_Typedef_Struct* Lorax, Lora_InitTypedef_Struct *Lora_
         return ERROR;
     }	
 
-		//2.Ìî³ä Í¨µÀ±äÁ¿  ²ÎÊýÉèÖÃ
+		//2.å¡«å…… é€šé“å˜é‡  å‚æ•°è®¾ç½®
     Lorax->LoraRegister.EnableLora           = Lora_Init_Struct->EnableLora;
 		Lorax->LoraRegister.EnableDMA            = Lora_Init_Struct->EnableDMA; 
 		Lorax->LoraRegister.TransMode            = Lora_Init_Struct->TransMode;
@@ -178,8 +178,8 @@ ErrorStatus Lora_Init(Lora_Typedef_Struct* Lorax, Lora_InitTypedef_Struct *Lora_
 		Lorax->LoraRegister.LoraRxdata.Fresh = RESET;
 		Lorax->LoraRegister.LoraTxdata.len  = 0;		
 
-    //3.³õÊ¼»¯ Lora Ó²¼þ  °üÀ¨ ÏÂ²ãÓ²¼þ
-    //3.1  ³õÊ¼»¯ GPIO
+    //3.åˆå§‹åŒ– Lora ç¡¬ä»¶  åŒ…æ‹¬ ä¸‹å±‚ç¡¬ä»¶
+    //3.1  åˆå§‹åŒ– GPIO
     GPIO_StructInit(&GPIO_InitStructure);				
     if(Lorax == Lora1)
 		{		
@@ -228,7 +228,7 @@ ErrorStatus Lora_Init(Lora_Typedef_Struct* Lorax, Lora_InitTypedef_Struct *Lora_
         return ERROR;
     }	
 
-    //3.2  ³õÊ¼»¯ SCOM	
+    //3.2  åˆå§‹åŒ– SCOM	
     SCOM_StructInit(&SCOM_InitStructure);		
 		if(ENABLE == Lorax->LoraRegister.EnableLora)
 		{
@@ -280,8 +280,8 @@ ErrorStatus Lora_Init(Lora_Typedef_Struct* Lorax, Lora_InitTypedef_Struct *Lora_
 
 
 /******************************************************************************
-* @brief  ´ò¿ª Lora                         	      		              	      *
-* @param  Lorax£¬Ñ¡Ôñ³õÊ¼»¯µÄLoraÄ£¿é£¬x¿ÉÒÔÊÇ1µ½ 3                           *
+* @brief  æ‰“å¼€ Lora                         	      		              	      *
+* @param  Loraxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„Loraæ¨¡å—ï¼Œxå¯ä»¥æ˜¯1åˆ° 3                           *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/ 
 ErrorStatus Lora_Open(Lora_Typedef_Struct* Lorax)
@@ -299,8 +299,8 @@ ErrorStatus Lora_Open(Lora_Typedef_Struct* Lorax)
     return SUCCESS;
 }
 /******************************************************************************
-* @brief  ¹Ø±Õ Lora                         	      		              	      *
-* @param  Lorax£¬Ñ¡Ôñ³õÊ¼»¯µÄLoraÄ£¿é£¬x¿ÉÒÔÊÇ1µ½ 3                           *
+* @brief  å…³é—­ Lora                         	      		              	      *
+* @param  Loraxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„Loraæ¨¡å—ï¼Œxå¯ä»¥æ˜¯1åˆ° 3                           *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/ 
 ErrorStatus Lora_Close(Lora_Typedef_Struct* Lorax)
@@ -318,9 +318,9 @@ ErrorStatus Lora_Close(Lora_Typedef_Struct* Lorax)
 
 
 /*****************************************************************************************
-  * @brief   ´ÓLora¶ÁÈ¡Êý¾Ý.                                                             *
-  * @param   Lorax:  ¶ÁÈ¡Êý¾ÝµÄLora£¬x¿ÉÒÔÊÇ1µ½ 3.                                       *
-  * @param   ReadData: Ö¸ÏòLora_READ_DATA_StructÀàÐÍµÄÊý¾Ý½á¹¹£¬ÓÃÓÚ´æ´¢È¡»ØµÄÊý¾Ý       *	
+  * @brief   ä»ŽLoraè¯»å–æ•°æ®.                                                             *
+  * @param   Lorax:  è¯»å–æ•°æ®çš„Loraï¼Œxå¯ä»¥æ˜¯1åˆ° 3.                                       *
+  * @param   ReadData: æŒ‡å‘Lora_READ_DATA_Structç±»åž‹çš„æ•°æ®ç»“æž„ï¼Œç”¨äºŽå­˜å‚¨å–å›žçš„æ•°æ®       *	
   * @retval  ERROR or SUCCESS.                                                           *
 *****************************************************************************************/
 ErrorStatus Lora_ReadData(Lora_Typedef_Struct *Lorax,Lora_READ_DATA_Struct * ReadData)
@@ -348,9 +348,9 @@ ErrorStatus Lora_ReadData(Lora_Typedef_Struct *Lorax,Lora_READ_DATA_Struct * Rea
 
 
 /*****************************************************************************************
-  * @brief   ÏòLoraÐ´ÈëÊý¾Ý.                                                             *
-  * @param   Lorax:  Ð´ÈëÊý¾ÝµÄLora£¬x¿ÉÒÔÊÇ1µ½ 3.                                       *
-  * @param   write_data: Ö¸ÏòLora_WRITE_DATA_StructÀàÐÍµÄÊý¾Ý½á¹¹£¬´æ´¢Ð´Èë·ÅÈëÊý¾Ý      *	
+  * @brief   å‘Loraå†™å…¥æ•°æ®.                                                             *
+  * @param   Lorax:  å†™å…¥æ•°æ®çš„Loraï¼Œxå¯ä»¥æ˜¯1åˆ° 3.                                       *
+  * @param   write_data: æŒ‡å‘Lora_WRITE_DATA_Structç±»åž‹çš„æ•°æ®ç»“æž„ï¼Œå­˜å‚¨å†™å…¥æ”¾å…¥æ•°æ®      *	
   * @retval  ERROR or SUCCESS.                                                           *
 *****************************************************************************************/
 ErrorStatus Lora_WriteData(Lora_Typedef_Struct *Lorax,Lora_WRITE_DATA_Struct *write_data)
@@ -365,7 +365,7 @@ ErrorStatus Lora_WriteData(Lora_Typedef_Struct *Lorax,Lora_WRITE_DATA_Struct *wr
 
 		Lorax->LoraRegister.LoraTxdata = *write_data;
 		
-		if(Lorax->LoraRegister.TransMode == Transparent_mode)    /*Èç¹û´«ÊäÄ£Ê½ÊÇÍ¸Ã÷´«Êä*/
+		if(Lorax->LoraRegister.TransMode == Transparent_mode)    /*å¦‚æžœä¼ è¾“æ¨¡å¼æ˜¯é€æ˜Žä¼ è¾“*/
 		{
 				LoraWriteData.len = write_data->len;
 				memcpy(LoraWriteData.data,&write_data->data,write_data->len);				

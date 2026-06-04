@@ -3,7 +3,7 @@
   * @author   W.Dong
   * @version  V1.0.0
   * @date     2/Jan./2020
-  * @brief    PWMÇı¶¯´úÂë  Í·ÎÄ¼ş 
+  * @brief    PWMé©±åŠ¨ä»£ç   å¤´æ–‡ä»¶ 
   ******************************************************************************/ 
 
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -299,55 +299,55 @@ extern  PWMout_TypeDef_Struct          PWMout12_BASE;
   */
 
 /**********************************************************************************
-* @brief  ÓÃÄ¬ÈÏ²ÎÊı³õÊ¼»¯PWMoutx_InitStruct                                      *                                                
-* @param  PWMoutx_InitStruct£ºÖ¸Ïò PWMout_InitTypeDef_Struct ÀàĞÍµÄ½á¹¹ÌåÊı¾İ     *
+* @brief  ç”¨é»˜è®¤å‚æ•°åˆå§‹åŒ–PWMoutx_InitStruct                                      *                                                
+* @param  PWMoutx_InitStructï¼šæŒ‡å‘ PWMout_InitTypeDef_Struct ç±»å‹çš„ç»“æ„ä½“æ•°æ®     *
 * @retval void.                                                                   *
 **********************************************************************************/
 void PWMout_StructInit(PWMout_InitTypeDef_Struct* PWMoutx_InitStruct);
 
 /********************************************************************************
-* @brief  ÓÃ PWMoutx_InitStruct ³õÊ¼»¯PWMoutx                                   *                                                
-* @param  PWMoutx£¬Ñ¡Ôñ³õÊ¼»¯µÄPWMoutx £¬x¿ÉÒÔÊÇ1µ½ PWMout_NUM_USED             *
-* @param  PWMoutx_InitStruct£º ³õÊ¼»¯µÄ PWMout_InitTypeDef_Struct ½á¹¹Êı¾İ      *
+* @brief  ç”¨ PWMoutx_InitStruct åˆå§‹åŒ–PWMoutx                                   *                                                
+* @param  PWMoutxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„PWMoutx ï¼Œxå¯ä»¥æ˜¯1åˆ° PWMout_NUM_USED             *
+* @param  PWMoutx_InitStructï¼š åˆå§‹åŒ–çš„ PWMout_InitTypeDef_Struct ç»“æ„æ•°æ®      *
 * @retval ERROR or SUCCESS.                                                     *
 ********************************************************************************/
 ErrorStatus PWMout_Init(PWMout_TypeDef_Struct* PWMoutx, PWMout_InitTypeDef_Struct* PWMoutx_InitStruct);
 
 /******************************************************************************
-* @brief  ´ò¿ª PWM Êä³ö                         	      		                  *
-* @param  PWMoutx£¬Ñ¡Ôñ³õÊ¼»¯µÄPWMoutx £¬x¿ÉÒÔÊÇ1µ½ PWMout_NUM_USED           *
+* @brief  æ‰“å¼€ PWM è¾“å‡º                         	      		                  *
+* @param  PWMoutxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„PWMoutx ï¼Œxå¯ä»¥æ˜¯1åˆ° PWMout_NUM_USED           *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/
 ErrorStatus PWMout_On(PWMout_TypeDef_Struct* PWMoutx);
 
 /******************************************************************************
-* @brief  ¹Ø±ÕPWM Êä³ö                         	      		                    *
-* @param  PWMoutx£¬Ñ¡Ôñ³õÊ¼»¯µÄPWMoutx £¬x¿ÉÒÔÊÇ1µ½ PWMout_NUM_USED           *
+* @brief  å…³é—­PWM è¾“å‡º                         	      		                    *
+* @param  PWMoutxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„PWMoutx ï¼Œxå¯ä»¥æ˜¯1åˆ° PWMout_NUM_USED           *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/
 ErrorStatus PWMout_Off(PWMout_TypeDef_Struct* PWMoutx);
 
 	
 /******************************************************************************
-* @brief  ¿ØÖÆPWM Õ¼¿Õ±ÈÊä³ö                         	      		              *
-* @param  PWMoutx£¬Ñ¡Ôñ³õÊ¼»¯µÄPWMoutx £¬x¿ÉÒÔÊÇ1µ½ PWMout_NUM_USED           *
-* @param  PWMout_Duty£º Õ¼¿Õ±È     0.0f < PWMout_Duty < 100.0f                *
+* @brief  æ§åˆ¶PWM å ç©ºæ¯”è¾“å‡º                         	      		              *
+* @param  PWMoutxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„PWMoutx ï¼Œxå¯ä»¥æ˜¯1åˆ° PWMout_NUM_USED           *
+* @param  PWMout_Dutyï¼š å ç©ºæ¯”     0.0f < PWMout_Duty < 100.0f                *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/	
 ErrorStatus PWMout_DutyCtrl(PWMout_TypeDef_Struct* PWMoutx, float PWMout_Duty);
 
 /******************************************************************************
-* @brief  Éè¶¨PWM Õ¼¿Õ±È×îĞ¡Öµ                         	      		            *
-* @param  PWMoutx£¬Ñ¡Ôñ³õÊ¼»¯µÄPWMoutx £¬x¿ÉÒÔÊÇ1µ½ PWMout_NUM_USED           *
-* @param  DutyMin£º Õ¼¿Õ±È×îĞ¡Öµ     0.0f < DutyMin < 100.0f                  *
+* @brief  è®¾å®šPWM å ç©ºæ¯”æœ€å°å€¼                         	      		            *
+* @param  PWMoutxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„PWMoutx ï¼Œxå¯ä»¥æ˜¯1åˆ° PWMout_NUM_USED           *
+* @param  DutyMinï¼š å ç©ºæ¯”æœ€å°å€¼     0.0f < DutyMin < 100.0f                  *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/	
 ErrorStatus PWMout_DutyMinSetting(PWMout_TypeDef_Struct* PWMoutx, float DutyMin);
 
 /******************************************************************************
-* @brief  Éè¶¨PWM Õ¼¿Õ±È×î´óÖµ                         	      		            *
-* @param  PWMoutx£¬Ñ¡Ôñ³õÊ¼»¯µÄPWMoutx £¬x¿ÉÒÔÊÇ1µ½ PWMout_NUM_USED           *
-* @param  DutyMax£º Õ¼¿Õ±È×î´óÖµ     0.0f < DutyMax < 100.0f                  *
+* @brief  è®¾å®šPWM å ç©ºæ¯”æœ€å¤§å€¼                         	      		            *
+* @param  PWMoutxï¼Œé€‰æ‹©åˆå§‹åŒ–çš„PWMoutx ï¼Œxå¯ä»¥æ˜¯1åˆ° PWMout_NUM_USED           *
+* @param  DutyMaxï¼š å ç©ºæ¯”æœ€å¤§å€¼     0.0f < DutyMax < 100.0f                  *
 * @retval ERROR or SUCCESS.                                                   *
 ******************************************************************************/	
 ErrorStatus PWMout_DutyMaxSetting(PWMout_TypeDef_Struct* PWMoutx, float DutyMax);

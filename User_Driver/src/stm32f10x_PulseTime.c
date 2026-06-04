@@ -118,7 +118,7 @@ static void     PulseTime_EXTI_Config(PulseTime_TypeDef_Struct* PulseTimex,
                                       FunctionalState enableState);
 static void     PulseTime_TIM_Config(PulseTime_TypeDef_Struct* PulseTimex);
 static void     PulseTime_EXTI_SetTrigger(uint32_t EXTI_Line, uint8_t toRising);
-static uint32_t PulseTime_GetStartTrigger(PulseTime_Memory_Struct* mem);
+static EXTITrigger_TypeDef PulseTime_GetStartTrigger(PulseTime_Memory_Struct* mem);
 static void     PulseTime_IRQ_Handler(uint8_t channelIndex);
 
 /**
@@ -168,7 +168,7 @@ static void PulseTime_GPIO_Config(PulseTime_TypeDef_Struct* PulseTimex)
   * @param  mem: 指向通道配置（内存区）的指针。
   * @retval EXTI_Trigger_Rising 或 EXTI_Trigger_Falling。
   *******************************************************************************/
-static uint32_t PulseTime_GetStartTrigger(PulseTime_Memory_Struct* mem)
+static EXTITrigger_TypeDef PulseTime_GetStartTrigger(PulseTime_Memory_Struct* mem)
 {
     if (mem->measureType == HighLevel_time) {
         return (mem->polar == Polar_positive)

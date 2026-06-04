@@ -20,18 +20,18 @@ typedef struct __CAR_speed_Struct
 }CAR_speed_Struct;
 
 
-typedef struct __Car_InitTypeDef_Struct  //³õÊ¼»¯½á¹¹Ìå£¨·ÅÉÏ²ã¿ÉÒÔ¸Ä±äµÄ²ÎÊı£©
+typedef struct __Car_InitTypeDef_Struct  //åˆå§‹åŒ–ç»“æ„ä½“ï¼ˆæ”¾ä¸Šå±‚å¯ä»¥æ”¹å˜çš„å‚æ•°ï¼‰
 {
 	  Motor_TypeDef_Struct                *motorL;
 	  Motor_TypeDef_Struct                *motorR;	
 	  FunctionalState         					  enable;
-	  CAR_speed_Struct			              initialSpeed; //³õÊ¼ËÙ¶È
+	  CAR_speed_Struct			              initialSpeed; //åˆå§‹é€Ÿåº¦
 	  float			                          maxSpeed; 
 	  float			                          minSpeed;  	
 }Car_InitTypeDef_Struct;
 
 
-/*------³õÊ¼»¯²ÎÊı------*/
+/*------åˆå§‹åŒ–å‚æ•°------*/
 
 #define CAR_MOTORL_DEFAULT 			  	    MOTOR1 
 #define CAR_MOTORR_DEFAULT 			  	    MOTOR2 
@@ -45,44 +45,44 @@ typedef struct __Car_InitTypeDef_Struct  //³õÊ¼»¯½á¹¹Ìå£¨·ÅÉÏ²ã¿ÉÒÔ¸Ä±äµÄ²ÎÊı£©
 
 
 /*-----------------------------------------------------------------------------------------------
- + ÊµÏÖ¹¦ÄÜ£ºµ÷ÕûcarÔËĞĞËÙ¶È¼°·½Ïò
- + ĞÎ    ²Î: straightSpeed£ºÊı¾İÀàĞÍ  CAR_speed_Struct£¬ÔËĞĞËÙ¶È
- +            straightSpeed = 0     Í£Ö¹
- +            straightSpeed >0      Ç°½øËÙ¶È
- +            straightSpeed < 0     ºóÍËËÙ¶È
+ + å®ç°åŠŸèƒ½ï¼šè°ƒæ•´carè¿è¡Œé€Ÿåº¦åŠæ–¹å‘
+ + å½¢    å‚: straightSpeedï¼šæ•°æ®ç±»å‹  CAR_speed_Structï¼Œè¿è¡Œé€Ÿåº¦
+ +            straightSpeed = 0     åœæ­¢
+ +            straightSpeed >0      å‰è¿›é€Ÿåº¦
+ +            straightSpeed < 0     åé€€é€Ÿåº¦
 
- +            corneringSpeed = 0     ²»×ªÍä
- +            corneringSpeed >0      ÓÒ×ªËÙ¶È
- +            corneringSpeed < 0     ×ó×ªËÙ¶È
- + ·µ»Ø²ÎÊı:ÎŞ
+ +            corneringSpeed = 0     ä¸è½¬å¼¯
+ +            corneringSpeed >0      å³è½¬é€Ÿåº¦
+ +            corneringSpeed < 0     å·¦è½¬é€Ÿåº¦
+ + è¿”å›å‚æ•°:æ— 
 -----------------------------------------------------------------------------------------------*/
 void CarDrive_Control(CAR_speed_Struct   speed);
 
 /******************************************************************************************
-  * @brief  ÓÃÄ¬ÈÏ²ÎÊıÌî³ä Car_InitStruct                                                 * 
-  * @param  CarInit : Car_InitTypeDef ÀàĞÍµÄ±äÁ¿                                          *
+  * @brief  ç”¨é»˜è®¤å‚æ•°å¡«å…… Car_InitStruct                                                 * 
+  * @param  CarInit : Car_InitTypeDef ç±»å‹çš„å˜é‡                                          *
   * @retval : None                                                                        *
 ******************************************************************************************/
 void Car_StructInit(Car_InitTypeDef_Struct* CarInit);
 
 /*-----------------------------------------------------------------------------------------------
- + ÊµÏÖ¹¦ÄÜ£º³õÊ¼»¯
- + ĞÎ    ²Î: CarInit
- + ·µ»Ø²ÎÊı: ERROR or SUCCESS
+ + å®ç°åŠŸèƒ½ï¼šåˆå§‹åŒ–
+ + å½¢    å‚: CarInit
+ + è¿”å›å‚æ•°: ERROR or SUCCESS
 -----------------------------------------------------------------------------------------------*/
 ErrorStatus CarDrive_Init(Car_InitTypeDef_Struct*  CarInit);
 
 /*-----------------------------------------------------------------------------------------------
- + ÊµÏÖ¹¦ÄÜ£ºÉèÖÃCar  ×î´óËÙ¶È
- + ĞÎ    ²Î: ÎŞ
- + ·µ»Ø²ÎÊı: ÎŞ
+ + å®ç°åŠŸèƒ½ï¼šè®¾ç½®Car  æœ€å¤§é€Ÿåº¦
+ + å½¢    å‚: æ— 
+ + è¿”å›å‚æ•°: æ— 
 -----------------------------------------------------------------------------------------------*/
 void CarDrive_SetSpeedMAX(float  speedMax);
 
 /*-----------------------------------------------------------------------------------------------
- + ÊµÏÖ¹¦ÄÜ£ºÉèÖÃCar  ×îĞ¡ËÙ¶È
- + ĞÎ    ²Î: ÎŞ
- + ·µ»Ø²ÎÊı: ÎŞ
+ + å®ç°åŠŸèƒ½ï¼šè®¾ç½®Car  æœ€å°é€Ÿåº¦
+ + å½¢    å‚: æ— 
+ + è¿”å›å‚æ•°: æ— 
 -----------------------------------------------------------------------------------------------*/
 void CarDrive_SetSpeedMIN(float  speedMin);
 

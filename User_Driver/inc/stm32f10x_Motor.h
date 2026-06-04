@@ -3,7 +3,7 @@
   * @author  Yu Chenhao
   * @version V1.0.0
   * @date    12/05/2020
-  * @brief   –°≥µµÁª˙øÿ÷∆ƒ£øÈªØ±‡≥Ã	
+  * @brief   Â∞èËΩ¶ÁîµÊú∫ÊéßÂà∂Ê®°ÂùóÂåñÁºñÁ®ã	
 *******************************************************************************/
 #ifndef __STM32F10x_MOTOR_H
 #define __STM32F10x_MOTOR_H
@@ -12,7 +12,7 @@
 #include "stm32f10x_PWMout.h"
 
 
-typedef struct __Motor_Hardware_TypeDef_Struct	//Motorµƒ”≤º˛≈‰÷√
+typedef struct __Motor_Hardware_TypeDef_Struct	//MotorÁöÑÁ°¨‰ª∂ÈÖçÁΩÆ
 {
 	  PWMout_TypeDef_Struct 		*PWMx;
 
@@ -22,24 +22,24 @@ typedef struct __Motor_Hardware_TypeDef_Struct	//Motorµƒ”≤º˛≈‰÷√
 	  GPIO_TypeDef   			      *CtrlIn2_GPIOx;	
 }Motor_Hardware_TypeDef_Struct;
 
-typedef struct __Motor_Memory_TypeDef_Struct		//Motor≤Œ ˝…Ë÷√
+typedef struct __Motor_Memory_TypeDef_Struct		//MotorÂèÇÊï∞ËÆæÁΩÆ
 {
-	  FunctionalState      enable;            // πƒ‹
-  	float			           speed;             //≥ı ºªØÀŸ∂»
-	  float                speedMax;          //µÁª˙◊Ó¥ÛÀŸ∂»
-	  float                speedMin;          //µÁª˙◊Ó–°
+	  FunctionalState      enable;            //‰ΩøËÉΩ
+  	float			           speed;             //ÂàùÂßãÂåñÈÄüÂ∫¶
+	  float                speedMax;          //ÁîµÊú∫ÊúÄÂ§ßÈÄüÂ∫¶
+	  float                speedMin;          //ÁîµÊú∫ÊúÄÂ∞è
 }Motor_Memory_TypeDef_Struct;
 
 typedef struct __Motor_TypeDef_Struct      
 {
-	  Motor_Hardware_TypeDef_Struct       HardWare;            //”≤º˛
-	  Motor_Memory_TypeDef_Struct         Memory;              //≤Œ ˝
+	  Motor_Hardware_TypeDef_Struct       HardWare;            //Á°¨‰ª∂
+	  Motor_Memory_TypeDef_Struct         Memory;              //ÂèÇÊï∞
 }Motor_TypeDef_Struct;
 
-typedef struct __Motor_InitTypeDef_Struct  //≥ı ºªØΩ·ππÃÂ£®∑≈…œ≤„ø…“‘∏ƒ±‰µƒ≤Œ ˝£©
+typedef struct __Motor_InitTypeDef_Struct  //ÂàùÂßãÂåñÁªìÊûÑ‰ΩìÔºàÊîæ‰∏äÂ±ÇÂèØ‰ª•ÊîπÂèòÁöÑÂèÇÊï∞Ôºâ
 {
 	  FunctionalState         					  enable;
-	  float			                          speed; //≥ı ºªØÀŸ∂»
+	  float			                          speed; //ÂàùÂßãÂåñÈÄüÂ∫¶
 	  float                               speedMax;  
 	  float                               speedMin; 
 	  PWMout_InitTypeDef_Struct				    PWMInit;	
@@ -66,7 +66,7 @@ typedef struct __Motor_InitTypeDef_Struct  //≥ı ºªØΩ·ππÃÂ£®∑≈…œ≤„ø…“‘∏ƒ±‰µƒ≤Œ ˝£
 
 
 
-//”≤º˛≈‰÷√
+//Á°¨‰ª∂ÈÖçÁΩÆ
 #if(MOTOR_NUM_USED>=1)
 extern  Motor_TypeDef_Struct           MOTOR1_BASE;
 #define MOTOR1            	          (&MOTOR1_BASE)
@@ -136,55 +136,55 @@ extern  Motor_TypeDef_Struct           MOTOR4_BASE;
 #endif
 
 
-/*------≥ı ºªØ≤Œ ˝------*/
+/*------ÂàùÂßãÂåñÂèÇÊï∞------*/
 #define MOTOR_ENABLE_DEFAULT 			  	   ENABLE 	    
 #define MOTOR_SPEED_DEFAULT			         (0.0f)
 #define MOTOR_SPEED_MAX			             (1.0f)
 #define MOTOR_SPEED_MIN			         	   (0.0f) 
 
 /******************************************************************************************
-  * @brief  ”√ƒ¨»œ≤Œ ˝ÃÓ≥‰ MOTOR_InitStruct                                               * 
-  * @param  MOTOR_InitStruct : MOTOR_InitTypeDef ¿‡–Õµƒ±‰¡ø                               *
+  * @brief  Áî®ÈªòËÆ§ÂèÇÊï∞Â°´ÂÖÖ MOTOR_InitStruct                                               * 
+  * @param  MOTOR_InitStruct : MOTOR_InitTypeDef Á±ªÂûãÁöÑÂèòÈáè                               *
   * @retval : None                                                                        *
 ******************************************************************************************/
 void Motor_StructInit(Motor_InitTypeDef_Struct* MOTORx_InitStruct);
 /*******************************************************************************************
-  * @brief  ≥ı ºªØ  µ•¬∑MOTOR                                                              *
-  * @param  MOTORx: ÷∏∂®≥ı ºªØµƒMOTOR           MOTOR_TypeDef_Struct *MOTORx               *
+  * @brief  ÂàùÂßãÂåñ  ÂçïË∑ØMOTOR                                                              *
+  * @param  MOTORx: ÊåáÂÆöÂàùÂßãÂåñÁöÑMOTOR           MOTOR_TypeDef_Struct *MOTORx               *
             MOTOR_InitStruct : pointer to a MOTOR_InitTypeDef                              *
   * @retval ERROR or SUCCESS .                                                             *
 *******************************************************************************************/
 ErrorStatus Motor_Init(Motor_TypeDef_Struct *MOTORx,Motor_InitTypeDef_Struct *MOTOR_InitStruct); 
 /******************************************************************************************
-  * @brief    πƒ‹µÁª˙øÿ÷∆                                    							                * 
+  * @brief   ‰ΩøËÉΩÁîµÊú∫ÊéßÂà∂                                    							                * 
   * @param   MOTORx: MOTOR_TypeDef_Struct *MOTORx                            	    	      *
   * @retval : ERROR or SUCCESS                                                            *
 ******************************************************************************************/
 ErrorStatus Motor_Open(Motor_TypeDef_Struct *MOTORx);
 /******************************************************************************************
-  * @brief  πÿ±’µÁª˙øÿ÷∆                                     							                * 
+  * @brief  ÂÖ≥Èó≠ÁîµÊú∫ÊéßÂà∂                                     							                * 
   * @param   MOTORx: MOTOR_TypeDef_Struct *MOTORx                            	    	      *
   * @retval : ERROR or SUCCESS                                                            *
 ******************************************************************************************/
 ErrorStatus Motor_Close(Motor_TypeDef_Struct *MOTORx);
 /******************************************************************************************
-  * @brief  …Ë÷√µÁª˙◊Ó¥ÛÀŸ∂»                                           					          * 
+  * @brief  ËÆæÁΩÆÁîµÊú∫ÊúÄÂ§ßÈÄüÂ∫¶                                           					          * 
   * @param   MOTORx: MOTOR_TypeDef_Struct *MOTORx                            	    	      *
-  * @param   speed:∏°µ„–Õ◊Ó¥ÛÀŸ∂» ˝æ›  0=<speed<= 1.0f                       	    	      *	
+  * @param   speed:ÊµÆÁÇπÂûãÊúÄÂ§ßÈÄüÂ∫¶Êï∞ÊçÆ  0=<speed<= 1.0f                       	    	      *	
   * @retval : ERROR or SUCCESS                                                            *
 ******************************************************************************************/
 ErrorStatus Motor_SetMaxSpeed(Motor_TypeDef_Struct *MOTORx,float speed);
 /******************************************************************************************
-  * @brief  …Ë÷√µÁª˙◊Ó–°ÀŸ∂»                                             				          * 
+  * @brief  ËÆæÁΩÆÁîµÊú∫ÊúÄÂ∞èÈÄüÂ∫¶                                             				          * 
   * @param   MOTORx: MOTOR_TypeDef_Struct *MOTORx                            	    	      *
-  * @param   speed:∏°µ„–Õ◊Ó¥ÛÀŸ∂» ˝æ›  0=<speed<= 1.0f                       	    	      *	
+  * @param   speed:ÊµÆÁÇπÂûãÊúÄÂ§ßÈÄüÂ∫¶Êï∞ÊçÆ  0=<speed<= 1.0f                       	    	      *	
   * @retval : ERROR or SUCCESS                                                            *
 ******************************************************************************************/
 ErrorStatus Motor_SetMinSpeed(Motor_TypeDef_Struct *MOTORx,float speed);
 /*******************************************************************************************
-  * @brief  ∏ƒ±‰µÁª˙ÀŸ∂»	                                                                 *
+  * @brief  ÊîπÂèòÁîµÊú∫ÈÄüÂ∫¶	                                                                 *
   * @param  motorx: Motor_TypeDef_Struct *motorx                                           *
-  * @param  speed: ∏°µ„ ˝æ›£¨ µº ÀŸ∂»0~1: µÁª˙’˝◊™    0~ -1£∫µÁª˙∑¥◊™                      *
+  * @param  speed: ÊµÆÁÇπÊï∞ÊçÆÔºåÂÆûÈôÖÈÄüÂ∫¶0~1: ÁîµÊú∫Ê≠£ËΩ¨    0~ -1ÔºöÁîµÊú∫ÂèçËΩ¨                      *
   * @retval ERROR or SUCCESS .                                                             *
 *******************************************************************************************/
 ErrorStatus Motor_SpeedCtrl(Motor_TypeDef_Struct *motorx,float speed);

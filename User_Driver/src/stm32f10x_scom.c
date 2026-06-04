@@ -3,7 +3,7 @@
   * @author  W. Dong
   * @version V1.0.1
   * @date    23/09/2022
-  * @brief   ´®¿ÚÇı¶¯  µ÷ÓÃº¯Êı¹Ù·½Çı¶¯¿â	
+  * @brief   ä¸²å£é©±åŠ¨  è°ƒç”¨å‡½æ•°å®˜æ–¹é©±åŠ¨åº“	
 *******************************************************************************/
 	
 /* Includes ------------------------------------------------------------------*/
@@ -32,8 +32,8 @@
 
 typedef struct __SCOM_RX_Buffer_Struct
 {  
-	 uint8_t      len;                           /*´®¿Ú½ÓÊÕ»º´æÊı¾İµÄÓĞĞ§³¤¶È*/ 
-   uint8_t      data[RX_BUFFER_MAX_SIZE];      /*´®¿Ú½ÓÊÕ»º´æÊı¾İ*/
+	 uint8_t      len;                           /*ä¸²å£æ¥æ”¶ç¼“å­˜æ•°æ®çš„æœ‰æ•ˆé•¿åº¦*/ 
+   uint8_t      data[RX_BUFFER_MAX_SIZE];      /*ä¸²å£æ¥æ”¶ç¼“å­˜æ•°æ®*/
 } SCOM_RX_Buffer_Struct;
 
 /** 
@@ -42,8 +42,8 @@ typedef struct __SCOM_RX_Buffer_Struct
 
 typedef struct __SCOM_TX_Buffer_Struct
 {  
-	 uint8_t      len;                          /*´®¿Ú·¢ËÍ»º´æÊı¾İµÄÓĞĞ§³¤¶È*/ 
-   uint8_t      data[TX_BUFFER_MAX_SIZE];     /*´®¿Ú·¢ËÍ»º´æÊı¾İ*/
+	 uint8_t      len;                          /*ä¸²å£å‘é€ç¼“å­˜æ•°æ®çš„æœ‰æ•ˆé•¿åº¦*/ 
+   uint8_t      data[TX_BUFFER_MAX_SIZE];     /*ä¸²å£å‘é€ç¼“å­˜æ•°æ®*/
 } SCOM_TX_Buffer_Struct;
 
 
@@ -59,12 +59,12 @@ typedef struct __SCOM_TX_Buffer_Struct
 /* --------------------------- SCOM_BASE --------------------------- */
 SCOM_TypeDef_Struct       SCOM1_BASE, SCOM2_BASE, SCOM3_BASE;
 
-/* --------------------------- ÖĞ¶Ï  ´æ´¢±äÁ¿ ---------------------- */
+/* --------------------------- ä¸­æ–­  å­˜å‚¨å˜é‡ ---------------------- */
 static  uint32_t           __SCOM_CPU_PRIMASK_REG_SAVE_VALUE;
 
-/* --------------------------- ·¢ËÍ½ÓÊÕ»º´æÇø ---------------------- */
-SCOM_RX_Buffer_Struct      SCOM1_rxDataBuffer;     //´æ·Å´®¿Ú·¢À´µÄÊı¾İ
-SCOM_TX_Buffer_Struct      SCOM1_txDataBuffer;     //´æ·Å·¢Íù´®¿ÚµÄÊı¾İ
+/* --------------------------- å‘é€æ¥æ”¶ç¼“å­˜åŒº ---------------------- */
+SCOM_RX_Buffer_Struct      SCOM1_rxDataBuffer;     //å­˜æ”¾ä¸²å£å‘æ¥çš„æ•°æ®
+SCOM_TX_Buffer_Struct      SCOM1_txDataBuffer;     //å­˜æ”¾å‘å¾€ä¸²å£çš„æ•°æ®
 
 SCOM_RX_Buffer_Struct      SCOM2_rxDataBuffer;
 SCOM_TX_Buffer_Struct      SCOM2_txDataBuffer;
@@ -72,9 +72,9 @@ SCOM_TX_Buffer_Struct      SCOM2_txDataBuffer;
 SCOM_RX_Buffer_Struct      SCOM3_rxDataBuffer;
 SCOM_TX_Buffer_Struct      SCOM3_txDataBuffer;
 
-/* --------------------------- ½ÓÊÕÍêÕûÊı¾İ ---------------------- */
+/* --------------------------- æ¥æ”¶å®Œæ•´æ•°æ® ---------------------- */
 
-//ÊÕµ½ÍêÕûÖ¡ºó£¬½«½ÓÊÕ»º´æÇøÊı¾İ´æÓÚ´Ë±äÁ¿£¬¹©ÓÃ»§¶Áº¯Êı¶ÁÈ¡
+//æ”¶åˆ°å®Œæ•´å¸§åï¼Œå°†æ¥æ”¶ç¼“å­˜åŒºæ•°æ®å­˜äºæ­¤å˜é‡ï¼Œä¾›ç”¨æˆ·è¯»å‡½æ•°è¯»å–
 SCOM_READ_DATA_Struct      SCOM1_rxData;
 SCOM_READ_DATA_Struct      SCOM2_rxData;
 SCOM_READ_DATA_Struct      SCOM3_rxData;
@@ -86,15 +86,15 @@ SCOM_READ_DATA_Struct      SCOM3_rxData;
 
 /*********************  SCOM_Private_Function Prototypes***********************************/
 
-static __INLINE void __SCOM_Disable_IRQ(void);    //¹ØÖĞ¶Ïº¯Êı
-static __INLINE void __SCOM_Restore_IRQ(void);    //¿ªÖĞ¶Ïº¯Êı
+static __INLINE void __SCOM_Disable_IRQ(void);    //å…³ä¸­æ–­å‡½æ•°
+static __INLINE void __SCOM_Restore_IRQ(void);    //å¼€ä¸­æ–­å‡½æ•°
 
 ErrorStatus SCOM_USART_SendData(SCOM_TypeDef_Struct *SCOMx);
 
 /*********************  SCOM_Private_Function  ********************************************/
 
 /*****************************************************************
-  * @brief   ¹ØÖĞ¶Ï                                              *
+  * @brief   å…³ä¸­æ–­                                              *
   * @param   void                                                *
   * @retval  void                                                *
 *****************************************************************/	
@@ -105,7 +105,7 @@ static __INLINE void __SCOM_Disable_IRQ(void)
 }
 
 /*****************************************************************
-  * @brief   ¿ªÖĞ¶Ï                                              *
+  * @brief   å¼€ä¸­æ–­                                              *
   * @param   void                                                *
   * @retval  void                                                *
 *****************************************************************/	
@@ -115,13 +115,13 @@ static __INLINE void __SCOM_Restore_IRQ(void)
 }
 
 /*****************************************************************************************
-  * @brief   ·ÇDMAÄ£Ê½ÏòÖ¸¶¨µÄ´®¿ÚĞ´ÈëÊı¾İ                                               *
-  * @param   SCOMx: Ğ´ÈëÊı¾İµÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to SCOM_NUM_USED.                          *                                               
+  * @brief   éDMAæ¨¡å¼å‘æŒ‡å®šçš„ä¸²å£å†™å…¥æ•°æ®                                               *
+  * @param   SCOMx: å†™å…¥æ•°æ®çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to SCOM_NUM_USED.                          *                                               
   * @retval  ERROR or SUCCESS.                                                           *
 *****************************************************************************************/	
 ErrorStatus SCOM_USART_SendData(SCOM_TypeDef_Struct *SCOMx)
 {
-		static uint8_t  cnt[3] = {0};      //´®¿Ú·¢ËÍ×Ö½Ú¸öÊı
+		static uint8_t  cnt[3] = {0};      //ä¸²å£å‘é€å­—èŠ‚ä¸ªæ•°
 	
     if(SCOMx  == NULL)
 			  return ERROR;
@@ -185,8 +185,8 @@ ErrorStatus SCOM_USART_SendData(SCOM_TypeDef_Struct *SCOMx)
 
 
 /*******************************************************************************************     
-  * @brief  ÓÃÄ¬ÈÏ²ÎÊıÌî³ä SCOM_InitStruct.                                                *
-  * @param  SCOM_InitStruct : ĞèÒª±»³õÊ¼»¯µÄ SCOM_InitTypeDef_structure ÀàĞÍµÄÊı¾İ½á¹¹     *
+  * @brief  ç”¨é»˜è®¤å‚æ•°å¡«å…… SCOM_InitStruct.                                                *
+  * @param  SCOM_InitStruct : éœ€è¦è¢«åˆå§‹åŒ–çš„ SCOM_InitTypeDef_structure ç±»å‹çš„æ•°æ®ç»“æ„     *
   * @retval  None                                                                          *
 *******************************************************************************************/
 void SCOM_StructInit(SCOM_InitTypeDef_Struct* SCOMx_InitStruct)
@@ -220,9 +220,9 @@ void SCOM_StructInit(SCOM_InitTypeDef_Struct* SCOMx_InitStruct)
 }
 
 /*******************************************************************************************
-  * @brief  ¸ù¾İ³õÊ¼»¯ºóµÄSCOM_InitStruct ³õÊ¼»¯´®¿Ú SCOMx                                 *
-  * @param  SCOMx: Ö¸ÏòĞèÒª³õÊ¼»¯µÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to 3.                                   *
-  * @param  SCOM_InitStruct : ÒÑ¾­±»³õÊ¼»¯µÄ SCOM_InitTypeDef_Struct ÀàĞÍµÄÊı¾İ½á¹¹        *
+  * @brief  æ ¹æ®åˆå§‹åŒ–åçš„SCOM_InitStruct åˆå§‹åŒ–ä¸²å£ SCOMx                                 *
+  * @param  SCOMx: æŒ‡å‘éœ€è¦åˆå§‹åŒ–çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to 3.                                   *
+  * @param  SCOM_InitStruct : å·²ç»è¢«åˆå§‹åŒ–çš„ SCOM_InitTypeDef_Struct ç±»å‹çš„æ•°æ®ç»“æ„        *
   * @retval ERROR or SUCCESS.                                                              *
 *******************************************************************************************/
 ErrorStatus SCOM_Init(SCOM_TypeDef_Struct* SCOMx, SCOM_InitTypeDef_Struct* SCOMx_InitStruct)
@@ -236,7 +236,7 @@ ErrorStatus SCOM_Init(SCOM_TypeDef_Struct* SCOMx, SCOM_InitTypeDef_Struct* SCOMx
 				return ERROR;
 		}
 		
-		  /** Ó²¼ş³õÊ¼»¯*****/
+		  /** ç¡¬ä»¶åˆå§‹åŒ–*****/
 		if (SCOMx == SCOM1)
 		{
         SCOM1_BASE.SCOM_Hardware.USARTx = SCOM1_USART;		
@@ -306,7 +306,7 @@ ErrorStatus SCOM_Init(SCOM_TypeDef_Struct* SCOMx, SCOM_InitTypeDef_Struct* SCOMx
 	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; 
 	  GPIO_Init(SCOMx->SCOM_Hardware.rx_GPIOx, &GPIO_InitStructure);				
 
-      /**²ÎÊıÉèÖÃ³õÊ¼»¯**/
+      /**å‚æ•°è®¾ç½®åˆå§‹åŒ–**/
 		SCOMx->SCOM_Operating.enable_SCOM = SCOMx_InitStruct->enable_SCOM;	 /*enable_SCOM*/
 		
     if ((SCOMx->SCOM_Hardware.tx_DMAy_Channelx == NULL) ||
@@ -450,8 +450,8 @@ ErrorStatus SCOM_Init(SCOM_TypeDef_Struct* SCOMx, SCOM_InitTypeDef_Struct* SCOMx
 }
 
 /******************************************************************************************
-  * @brief  ´ò¿ª´®¿Ú.                                                                     *
-  * @param  SCOMx: Ö¸ÏòĞèÒª´ò¿ªµÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to 3.                                    *
+  * @brief  æ‰“å¼€ä¸²å£.                                                                     *
+  * @param  SCOMx: æŒ‡å‘éœ€è¦æ‰“å¼€çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to 3.                                    *
   * @retval ERROR or SUCCESS.                                                             *
 ******************************************************************************************/
 ErrorStatus SCOM_Open(SCOM_TypeDef_Struct* SCOMx)
@@ -473,8 +473,8 @@ ErrorStatus SCOM_Open(SCOM_TypeDef_Struct* SCOMx)
 
 
 /******************************************************************************************
-  * @brief  ¹Ø±Õ´®¿Ú.                                                                     *
-  * @param  SCOMx: Ö¸ÏòĞèÒª´ò¿ªµÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to SCOM_NUM_USED.                        *
+  * @brief  å…³é—­ä¸²å£.                                                                     *
+  * @param  SCOMx: æŒ‡å‘éœ€è¦æ‰“å¼€çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to SCOM_NUM_USED.                        *
   * @retval ERROR or SUCCESS.                                                             *
 ******************************************************************************************/
 ErrorStatus SCOM_Off(SCOM_TypeDef_Struct* SCOMx)
@@ -491,12 +491,12 @@ ErrorStatus SCOM_Off(SCOM_TypeDef_Struct* SCOMx)
 }
 
 /*****************************************************************************************
-  * @brief   ´Ó´®¿Ú¶ÁÈ¡Êı¾İ.                                                             *
-  * @param   SCOMx:  ¶ÁÈ¡Êı¾İµÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to 3.                                     *
-  * @param   pdata: Ö¸ÏòSCOM_READ_DATA_StructÀàĞÍµÄÊı¾İ½á¹¹£¬ÓÃÓÚ´æ´¢È¡»ØµÄ´®¿ÚÊı¾İ      *	
-  *              Fresh                       ½ÓÊÕÊı¾İ¸üĞÂ±êÖ¾                            *
-	*              len                         ´®¿Ú¶ÁÈëÊı¾İµÄÓĞĞ§³¤¶È                      *
-  *              data[len]                   ´®¿Ú¶ÁÈëÊı¾İ                                *
+  * @brief   ä»ä¸²å£è¯»å–æ•°æ®.                                                             *
+  * @param   SCOMx:  è¯»å–æ•°æ®çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to 3.                                     *
+  * @param   pdata: æŒ‡å‘SCOM_READ_DATA_Structç±»å‹çš„æ•°æ®ç»“æ„ï¼Œç”¨äºå­˜å‚¨å–å›çš„ä¸²å£æ•°æ®      *	
+  *              Fresh                       æ¥æ”¶æ•°æ®æ›´æ–°æ ‡å¿—                            *
+	*              len                         ä¸²å£è¯»å…¥æ•°æ®çš„æœ‰æ•ˆé•¿åº¦                      *
+  *              data[len]                   ä¸²å£è¯»å…¥æ•°æ®                                *
   * @retval  ERROR or SUCCESS.                                                           *
 *****************************************************************************************/
 ErrorStatus SCOM_ReadData(SCOM_TypeDef_Struct*SCOMx, SCOM_READ_DATA_Struct* pdata)
@@ -550,9 +550,9 @@ ErrorStatus SCOM_ReadData(SCOM_TypeDef_Struct*SCOMx, SCOM_READ_DATA_Struct* pdat
 
 
 /*****************************************************************************************
-  * @brief   ÏòÖ¸¶¨µÄ´®¿ÚĞ´ÈëÊı¾İ£¬´®¿Ú·¢ËÍÔÊĞí±êÖ¾SETÊ±£¬ÔÊĞíĞ´ÈëÊı¾İ·¢ËÍ               *
-  * @param   SCOMx: Ğ´ÈëÊı¾İµÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to 3.                                      *
-  * @param   pdata: Ö¸Ïò SCOM_WRITE_DATA_Struct ÀàĞÍµÄ´®¿ÚĞ´ÈëÊı¾İ.                      *                                                *
+  * @brief   å‘æŒ‡å®šçš„ä¸²å£å†™å…¥æ•°æ®ï¼Œä¸²å£å‘é€å…è®¸æ ‡å¿—SETæ—¶ï¼Œå…è®¸å†™å…¥æ•°æ®å‘é€               *
+  * @param   SCOMx: å†™å…¥æ•°æ®çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to 3.                                      *
+  * @param   pdata: æŒ‡å‘ SCOM_WRITE_DATA_Struct ç±»å‹çš„ä¸²å£å†™å…¥æ•°æ®.                      *                                                *
   * @retval  ERROR or SUCCESS.                                                           *
 *****************************************************************************************/
 ErrorStatus SCOM_WriteData(SCOM_TypeDef_Struct* SCOMx, SCOM_WRITE_DATA_Struct* pdata)
@@ -562,23 +562,23 @@ ErrorStatus SCOM_WriteData(SCOM_TypeDef_Struct* SCOMx, SCOM_WRITE_DATA_Struct* p
 
     if(SCOMx == SCOM1)
 		{
-		    if (SCOM1->SCOM_Operating.USART_txAllowFlag == SET)	   //ÈôÔÊĞí·¢ËÍ
+		    if (SCOM1->SCOM_Operating.USART_txAllowFlag == SET)	   //è‹¥å…è®¸å‘é€
 				{
 				    SCOM1_txDataBuffer.len = pdata ->len;
 				    memcpy(SCOM1_txDataBuffer.data,pdata->data, pdata->len);
 					
-					  if(SCOM1->SCOM_Operating.enable_DMA == ENABLE)   //Ê¹ÓÃDMA
+					  if(SCOM1->SCOM_Operating.enable_DMA == ENABLE)   //ä½¿ç”¨DMA
 						{		
 								DMA_Cmd(SCOM1->SCOM_Hardware.tx_DMAy_Channelx, DISABLE);
 								DMA_SetCurrDataCounter(SCOM1->SCOM_Hardware.tx_DMAy_Channelx, (uint16_t)SCOM1_txDataBuffer.len);
 								DMA_Cmd(SCOM1->SCOM_Hardware.tx_DMAy_Channelx, ENABLE);
 						}
-            else      //·ÇDMA
+            else      //éDMA
 						{			
 						    SCOM_USART_SendData(SCOM1);								
 						}
 						    
-						SCOM1->SCOM_Operating.USART_txAllowFlag = RESET;		  //ÉèÖÃÎª²»ÔÊĞíĞ´SCOM					
+						SCOM1->SCOM_Operating.USART_txAllowFlag = RESET;		  //è®¾ç½®ä¸ºä¸å…è®¸å†™SCOM					
 				}							
 		}			
     else if(SCOMx == SCOM2)
@@ -588,13 +588,13 @@ ErrorStatus SCOM_WriteData(SCOM_TypeDef_Struct* SCOMx, SCOM_WRITE_DATA_Struct* p
 				    SCOM2_txDataBuffer.len = pdata ->len;
 				    memcpy(SCOM2_txDataBuffer.data,pdata->data, pdata->len);
 					
-					  if(SCOM2->SCOM_Operating.enable_DMA == ENABLE)   //Ê¹ÓÃDMA
+					  if(SCOM2->SCOM_Operating.enable_DMA == ENABLE)   //ä½¿ç”¨DMA
 						{		
 								DMA_Cmd(SCOM2->SCOM_Hardware.tx_DMAy_Channelx, DISABLE);
 								DMA_SetCurrDataCounter(SCOM2->SCOM_Hardware.tx_DMAy_Channelx, (uint16_t)SCOM2_txDataBuffer.len);
 								DMA_Cmd(SCOM2->SCOM_Hardware.tx_DMAy_Channelx, ENABLE);
 						}
-            else      //·ÇDMA
+            else      //éDMA
 						{			
 						    SCOM_USART_SendData(SCOM2);								
 						}
@@ -609,13 +609,13 @@ ErrorStatus SCOM_WriteData(SCOM_TypeDef_Struct* SCOMx, SCOM_WRITE_DATA_Struct* p
 				    SCOM3_txDataBuffer.len = pdata ->len;
 				    memcpy(SCOM3_txDataBuffer.data,pdata->data, pdata->len);
 					
-					  if(SCOM3->SCOM_Operating.enable_DMA == ENABLE)   //Ê¹ÓÃDMA
+					  if(SCOM3->SCOM_Operating.enable_DMA == ENABLE)   //ä½¿ç”¨DMA
 						{		
 								DMA_Cmd(SCOM3->SCOM_Hardware.tx_DMAy_Channelx, DISABLE);
 								DMA_SetCurrDataCounter(SCOM3->SCOM_Hardware.tx_DMAy_Channelx, (uint16_t)SCOM3_txDataBuffer.len);
 								DMA_Cmd(SCOM3->SCOM_Hardware.tx_DMAy_Channelx, ENABLE);
 						}
-            else      //·ÇDMA
+            else      //éDMA
 						{			
 						    SCOM_USART_SendData(SCOM3);								
 						}
@@ -631,8 +631,8 @@ ErrorStatus SCOM_WriteData(SCOM_TypeDef_Struct* SCOMx, SCOM_WRITE_DATA_Struct* p
 
 
 /****************************************************************************************
-  * @brief   ´®¿ÚÖĞ¶Ï¾ßÌåÖ´ĞĞµÄ·şÎñº¯Êı(Receive interrupt and send interrupt)           *
-  * @param   SCOMx:ÖĞ¶ÏÊı¾İµÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to SCOM_NUM_USED.                          *
+  * @brief   ä¸²å£ä¸­æ–­å…·ä½“æ‰§è¡Œçš„æœåŠ¡å‡½æ•°(Receive interrupt and send interrupt)           *
+  * @param   SCOMx:ä¸­æ–­æ•°æ®çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to SCOM_NUM_USED.                          *
   * @retval  ERROR or SUCCESS.                                                          *
 ****************************************************************************************/
 ErrorStatus SCOM_IRQHandler(SCOM_TypeDef_Struct* SCOMx)
@@ -679,7 +679,7 @@ ErrorStatus SCOM_IRQHandler(SCOM_TypeDef_Struct* SCOMx)
 				}
 		}
 
-		//¿ÕÏĞÖĞ¶Ï
+		//ç©ºé—²ä¸­æ–­
     if(USART_GetFlagStatus(SCOMx->SCOM_Hardware.USARTx,USART_FLAG_IDLE) == SET)	
 		{ 
 				if(SCOMx->SCOM_Operating.enable_DMA == ENABLE)
@@ -739,7 +739,7 @@ ErrorStatus SCOM_IRQHandler(SCOM_TypeDef_Struct* SCOMx)
 				if(SCOMx->SCOM_Operating.rxCallbackFun != NULL)
 				    (*SCOMx->SCOM_Operating.rxCallbackFun)();				
 				
-				//Çå  ¿ÕÏĞÖĞ¶Ï±êÖ¾
+				//æ¸…  ç©ºé—²ä¸­æ–­æ ‡å¿—
 				clear = SCOMx->SCOM_Hardware.USARTx->SR;
 				clear = SCOMx->SCOM_Hardware.USARTx->DR;
 				clear = clear;
@@ -749,8 +749,8 @@ ErrorStatus SCOM_IRQHandler(SCOM_TypeDef_Struct* SCOMx)
 
 
 /****************************************************************************************
-  * @brief  ´®¿Ú ·¢ËÍDMAÖĞ¶Ï¾ßÌåÖ´ĞĞµÄ·şÎñº¯Êı                                          *
-  * @param  SCOMx:ÖĞ¶ÏÊı¾İµÄ´®¿Ú£¬x ¿ÉÒÔÊÇ1 to 3.                                       *
+  * @brief  ä¸²å£ å‘é€DMAä¸­æ–­å…·ä½“æ‰§è¡Œçš„æœåŠ¡å‡½æ•°                                          *
+  * @param  SCOMx:ä¸­æ–­æ•°æ®çš„ä¸²å£ï¼Œx å¯ä»¥æ˜¯1 to 3.                                       *
   * @retval ERROR or SUCCESS.                                                           *
 ****************************************************************************************/
 ErrorStatus	SCOM_TX_DMA_IRQHandler(SCOM_TypeDef_Struct *SCOMx)
