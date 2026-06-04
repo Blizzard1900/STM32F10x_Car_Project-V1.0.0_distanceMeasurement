@@ -1,0 +1,49 @@
+*** Creating Trace Output File '..\out\stm32f10x_module4in1.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"..\out\device_timer.o"'
+### List of Objects: adding '"..\out\init.o"'
+### List of Objects: adding '"..\out\main.o"'
+### List of Objects: adding '"..\out\scheduler.o"'
+### List of Objects: adding '"..\out\task_data_input.o"'
+### List of Objects: adding '"..\out\task_data_output.o"'
+### List of Objects: adding '"..\out\task_data_remap.o"'
+### List of Objects: adding '"..\out\time.o"'
+### List of Objects: adding '"..\out\shm_adc4in1.o"'
+### List of Objects: adding '"..\out\task_adc_converttick.o"'
+### List of Objects: adding '"..\out\stm32f10x_scom_it.o"'
+### List of Objects: adding '"..\out\stm32f10x_scom_hardwaretable.o"'
+### List of Objects: adding '"..\User_Driver\lib\FIFO_QUEUE.lib"'
+### List of Objects: adding '"..\out\stm32f10x_stmadc_hardwaretable.o"'
+### List of Objects: adding '"..\out\stm32f10x_adc4in1_iwdg.o"'
+### List of Objects: adding '"..\out\stm32f10x_stmadc.o"'
+### List of Objects: adding '"..\User_Driver\lib\stmf10x_FIR_Lowpass.lib"'
+### List of Objects: adding '"..\out\stm32f10x_sbus.o"'
+### List of Objects: adding '"..\out\stm32f10x_scom.o"'
+### List of Objects: adding '"..\out\core_cm3.o"'
+### List of Objects: adding '"..\out\startup_stm32f10x_hd.o"'
+### List of Objects: adding '"..\out\misc.o"'
+### List of Objects: adding '"..\out\stm32f10x_dma.o"'
+### List of Objects: adding '"..\out\stm32f10x_flash.o"'
+### List of Objects: adding '"..\out\stm32f10x_gpio.o"'
+### List of Objects: adding '"..\out\stm32f10x_rcc.o"'
+### List of Objects: adding '"..\out\stm32f10x_usart.o"'
+### List of Objects: adding '"..\out\system_stm32f10x.o"'
+### List of Objects: adding '"..\out\stm32f10x_adc.o"'
+### List of Objects: adding '"..\out\stm32f10x_iwdg.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "..\out\device_timer.o" "..\out\init.o" "..\out\main.o" "..\out\scheduler.o" "..\out\task_data_input.o" "..\out\task_data_output.o" "..\out\task_data_remap.o" "..\out\time.o" "..\out\shm_adc4in1.o" "..\out\task_adc_converttick.o" "..\out\stm32f10x_scom_it.o" "..\out\stm32f10x_scom_hardwaretable.o" F:\科研\机器人\4in1\STM32代码\ADC4IN1_SBUS\User_Driver\lib\FIFO_QUEUE.lib "..\out\stm32f10x_stmadc_hardwaretable.o" "..\out\stm32f10x_adc4in1_iwdg.o" "..\out\stm32f10x_stmadc.o" F:\科研\机器人\4in1\STM32代码\ADC4IN1_SBUS\User_Driver\lib\stmf10x_FIR_Lowpass.lib "..\out\stm32f10x_sbus.o" "..\out\stm32f10x_scom.o" "..\out\core_cm3.o" "..\out\startup_stm32f10x_hd.o" "..\out\misc.o" "..\out\stm32f10x_dma.o" "..\out\stm32f10x_flash.o" "..\out\stm32f10x_gpio.o" "..\out\stm32f10x_rcc.o" "..\out\stm32f10x_usart.o" "..\out\system_stm32f10x.o" "..\out\stm32f10x_adc.o" "..\out\stm32f10x_iwdg.o" 
+--strict --scatter "..\out\stm32f10x_module4in1.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\stm32f10x_module4in1.map" -o ..\out\stm32f10x_module4in1.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '..\out\stm32f10x_module4in1.axf'
+### ADS-LD Command File: '..\out\stm32f10x_module4in1.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '..\out\stm32f10x_module4in1.lnp', Handle=0x00000230
+### Writing '.lnp' file
+### ADS-LD Command file '..\out\stm32f10x_module4in1.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

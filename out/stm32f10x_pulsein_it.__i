@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\FWlib\inc -I..\Sys_Init\inc -I..\User_Driver\inc -I..\User_Prog\inc
+-I G:\教学\课件\物联网应用\实验代码\遥控车代码（202002132000整理）\STM32F10x_Car_Project-V1.0.0\project\RTE
+-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0
+-I C:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="514" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o ..\out\stm32f10x_pulsein_it.o --omf_browse ..\out\stm32f10x_pulsein_it.crf --depend ..\out\stm32f10x_pulsein_it.d "..\User_Driver\src\stm32f10x_PulseIn_it.c"

@@ -1,0 +1,48 @@
+*** Creating Trace Output File '..\out\stm32f10x_ADCtoPWM.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"..\out\device_timer.o"'
+### List of Objects: adding '"..\out\init.o"'
+### List of Objects: adding '"..\out\main.o"'
+### List of Objects: adding '"..\out\scheduler.o"'
+### List of Objects: adding '"..\out\task_data_input.o"'
+### List of Objects: adding '"..\out\task_data_output.o"'
+### List of Objects: adding '"..\out\task_data_remap.o"'
+### List of Objects: adding '"..\out\time.o"'
+### List of Objects: adding '"..\out\task_adc_converttick.o"'
+### List of Objects: adding '"..\out\shm_adctopwm.o"'
+### List of Objects: adding '"..\out\stm32f10x_stmadc_hardwaretable.o"'
+### List of Objects: adding '"..\out\stm32f10x_stmadc.o"'
+### List of Objects: adding '"..\out\stm32f10x_pwm.o"'
+### List of Objects: adding '"..\out\stm32f10x_pwm_hardwaretable.o"'
+### List of Objects: adding '"..\out\stm32f10x_adctopwm_iwdg.o"'
+### List of Objects: adding '"..\out\stmf10x_fir_lowpass.o"'
+### List of Objects: adding '"..\out\core_cm3.o"'
+### List of Objects: adding '"..\out\startup_stm32f10x_md.o"'
+### List of Objects: adding '"..\out\misc.o"'
+### List of Objects: adding '"..\out\stm32f10x_dma.o"'
+### List of Objects: adding '"..\out\stm32f10x_flash.o"'
+### List of Objects: adding '"..\out\stm32f10x_gpio.o"'
+### List of Objects: adding '"..\out\stm32f10x_rcc.o"'
+### List of Objects: adding '"..\out\stm32f10x_usart.o"'
+### List of Objects: adding '"..\out\system_stm32f10x.o"'
+### List of Objects: adding '"..\out\stm32f10x_adc.o"'
+### List of Objects: adding '"..\out\stm32f10x_iwdg.o"'
+### List of Objects: adding '"..\out\stm32f10x_exti.o"'
+### List of Objects: adding '"..\out\stm32f10x_tim.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "..\out\device_timer.o" "..\out\init.o" "..\out\main.o" "..\out\scheduler.o" "..\out\task_data_input.o" "..\out\task_data_output.o" "..\out\task_data_remap.o" "..\out\time.o" "..\out\task_adc_converttick.o" "..\out\shm_adctopwm.o" "..\out\stm32f10x_stmadc_hardwaretable.o" "..\out\stm32f10x_stmadc.o" "..\out\stm32f10x_pwm.o" "..\out\stm32f10x_pwm_hardwaretable.o" "..\out\stm32f10x_adctopwm_iwdg.o" "..\out\stmf10x_fir_lowpass.o" "..\out\core_cm3.o" "..\out\startup_stm32f10x_md.o" "..\out\misc.o" "..\out\stm32f10x_dma.o" "..\out\stm32f10x_flash.o" "..\out\stm32f10x_gpio.o" "..\out\stm32f10x_rcc.o" "..\out\stm32f10x_usart.o" "..\out\system_stm32f10x.o" "..\out\stm32f10x_adc.o" "..\out\stm32f10x_iwdg.o" "..\out\stm32f10x_exti.o" "..\out\stm32f10x_tim.o" 
+--strict --scatter "..\out\stm32f10x_ADCtoPWM.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\stm32f10x_ADCtoPWM.map" -o ..\out\stm32f10x_ADCtoPWM.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '..\out\stm32f10x_ADCtoPWM.axf'
+### ADS-LD Command File: '..\out\stm32f10x_ADCtoPWM.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '..\out\stm32f10x_ADCtoPWM.lnp', Handle=0x00000330
+### Writing '.lnp' file
+### ADS-LD Command file '..\out\stm32f10x_ADCtoPWM.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\FWlib\inc -I..\Sys_Init\inc -I..\User_Driver\inc -I..\User_Prog\inc
+-I C:\科研\机器人\201811验收\V1.0.0\20190210修改（用我的PWM接收）\ADCtoPWM_Project-V1.0.0\project\RTE
+-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0
+-I C:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD
+-o ..\out\stm32f10x_pwm_hardwaretable.o --omf_browse ..\out\stm32f10x_pwm_hardwaretable.crf --depend ..\out\stm32f10x_pwm_hardwaretable.d "..\User_Driver\src\stm32f10x_pwm_hardwaretable.c"

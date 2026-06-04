@@ -1,0 +1,39 @@
+SET PATH=E:\Snap\Keil\ARM\ARMCC\Bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Flyin\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Flyin\AppData\Local\Programs\Python\Python313\;C:\Users\Flyin\AppData\Local\Microsoft\WindowsApps;C:\Users\Flyin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Flyin\AppData\Local\UGit\app-5.44.1\resources\app\git\cmd;C:\Users\Flyin\AppData\Local\UGit\bin;C:\Users\Flyin\.dotnet\tools;C:\Users\Flyin\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1-full_build\bin;D:\Snap\cursor\resources\app\bin
+SET ARMCC5_ASMOPT=--diag_suppress=9931
+SET ARMCC5_CCOPT=--diag_suppress=9931
+SET ARMCC5_LINKOPT=--diag_suppress=9931
+SET CPU_TYPE=STM32F103ZE
+SET CPU_VENDOR=STMicroelectronics
+SET UV2_TARGET=CAR
+SET CPU_CLOCK=0x00B71B00
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_lora.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_scom.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_scom_it.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_pwmout.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_cardrive.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_motor.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_pulsetime_it.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_pulsetime.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\shm_car.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_mapscomandsbus.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\main.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\taskcarctrl.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\taskcomm.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\taskdatapars.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\core_cm3.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\system_stm32f10x.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmAsm" --Via "..\out\startup_stm32f10x_hd._ia"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\misc.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_flash.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_gpio.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_rcc.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_iwdg.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_tim.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_dma.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_usart.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_exti.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\device_timer.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\scheduler.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\time.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmLink" --Via "..\out\stm32f10x_Car.lnp"
+"E:\Snap\Keil\ARM\ARMCC\Bin\fromelf.exe" "..\out\stm32f10x_Car.axf" --i32combined --output "..\out\stm32f10x_Car.hex"
