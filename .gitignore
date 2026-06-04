@@ -1,3 +1,7 @@
 ./vscode/*
 projects/*
 out/*
+*.log
+*.o
+*.BAT
+*.lock
