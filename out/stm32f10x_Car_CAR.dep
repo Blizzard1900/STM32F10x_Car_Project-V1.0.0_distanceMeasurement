@@ -1,6 +1,6 @@
 Dependencies for Project 'stm32f10x_Car', Target 'CAR': (DO NOT MODIFY !)
 F (..\User_Driver\src\stm32f10x_Lora.c)(0x69E0577C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\stm32f10x_lora.o --omf_browse ..\out\stm32f10x_lora.crf --depend ..\out\stm32f10x_lora.d)
-I (..\User_Driver\inc\stm32f10x_Lora.h)(0x69E0512B)
+I (..\User_Driver\inc\stm32f10x_Lora.h)(0x6A20E608)
 I (..\User_Driver\inc\stm32f10x_scom.h)(0x69D715ED)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
 I (..\Sys_Init\inc\core_cm3.h)(0x49D96948)
@@ -192,8 +192,8 @@ I (..\FWlib\inc\stm32f10x_usart.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_wwdg.h)(0x50875AF0)
 I (..\FWlib\inc\misc.h)(0x50875AF0)
 I (E:\Snap\Keil\ARM\ARMCC\include\math.h)(0x588B8344)
-F (..\User_Driver\src\stm32f10x_PulseTime_it.c)(0x69F2BA95)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\stm32f10x_pulsetime_it.o --omf_browse ..\out\stm32f10x_pulsetime_it.crf --depend ..\out\stm32f10x_pulsetime_it.d)
-I (..\User_Driver\inc\stm32f10x_PulseTime.h)(0x6A200385)
+F (..\User_Driver\src\stm32f10x_PulseTime_it.c)(0x6A20EF24)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\stm32f10x_pulsetime_it.o --omf_browse ..\out\stm32f10x_pulsetime_it.crf --depend ..\out\stm32f10x_pulsetime_it.d)
+I (..\User_Driver\inc\stm32f10x_PulseTime.h)(0x6A20EF4B)
 I (E:\Snap\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
 I (..\Sys_Init\inc\core_cm3.h)(0x49D96948)
@@ -223,8 +223,8 @@ I (..\FWlib\inc\stm32f10x_tim.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_usart.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_wwdg.h)(0x50875AF0)
 I (..\FWlib\inc\misc.h)(0x50875AF0)
-F (..\User_Driver\src\stm32f10x_PulseTime.c)(0x6A2003DA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\stm32f10x_pulsetime.o --omf_browse ..\out\stm32f10x_pulsetime.crf --depend ..\out\stm32f10x_pulsetime.d)
-I (..\User_Driver\inc\stm32f10x_PulseTime.h)(0x6A200385)
+F (..\User_Driver\src\stm32f10x_PulseTime.c)(0x6A20F032)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\stm32f10x_pulsetime.o --omf_browse ..\out\stm32f10x_pulsetime.crf --depend ..\out\stm32f10x_pulsetime.d)
+I (..\User_Driver\inc\stm32f10x_PulseTime.h)(0x6A20EF4B)
 I (E:\Snap\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
 I (..\Sys_Init\inc\core_cm3.h)(0x49D96948)
@@ -254,9 +254,9 @@ I (..\FWlib\inc\stm32f10x_tim.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_usart.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_wwdg.h)(0x50875AF0)
 I (..\FWlib\inc\misc.h)(0x50875AF0)
-F (..\User_App\src\SHM_Car.c)(0x69E08DCA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\shm_car.o --omf_browse ..\out\shm_car.crf --depend ..\out\shm_car.d)
-I (..\User_App\inc\SHM_Car.h)(0x69A6E092)
-I (..\User_Driver\inc\stm32f10x_Lora.h)(0x69E0512B)
+F (..\User_App\src\SHM_Car.c)(0x6A20ED34)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\shm_car.o --omf_browse ..\out\shm_car.crf --depend ..\out\shm_car.d)
+I (..\User_App\inc\SHM_Car.h)(0x6A20EC42)
+I (..\User_Driver\inc\stm32f10x_Lora.h)(0x6A20E608)
 I (..\User_Driver\inc\stm32f10x_scom.h)(0x69D715ED)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
 I (..\Sys_Init\inc\core_cm3.h)(0x49D96948)
@@ -290,9 +290,9 @@ I (E:\Snap\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\User_Driver\inc\stm32f10x_CarDrive.h)(0x69A6D803)
 I (..\User_Driver\inc\stm32f10x_Motor.h)(0x623534C8)
 I (..\User_Driver\inc\stm32f10x_PWMout.h)(0x61ECA19C)
-I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x69A7B198)
+I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x6A20EC63)
 F (..\User_App\src\stm32f10x_MapSCOMandSBUS.c)(0x69A7B198)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\stm32f10x_mapscomandsbus.o --omf_browse ..\out\stm32f10x_mapscomandsbus.crf --depend ..\out\stm32f10x_mapscomandsbus.d)
-I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x69A7B198)
+I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x6A20EC63)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
 I (..\Sys_Init\inc\core_cm3.h)(0x49D96948)
 I (E:\Snap\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -322,7 +322,7 @@ I (..\FWlib\inc\stm32f10x_usart.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_wwdg.h)(0x50875AF0)
 I (..\FWlib\inc\misc.h)(0x50875AF0)
 I (E:\Snap\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
-F (..\User_Prog\src\main.c)(0x6A20239C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\main.o --omf_browse ..\out\main.crf --depend ..\out\main.d)
+F (..\User_Prog\src\main.c)(0x6A20254F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\main.o --omf_browse ..\out\main.crf --depend ..\out\main.d)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
 I (..\Sys_Init\inc\core_cm3.h)(0x49D96948)
 I (E:\Snap\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -353,18 +353,18 @@ I (..\FWlib\inc\stm32f10x_wwdg.h)(0x50875AF0)
 I (..\FWlib\inc\misc.h)(0x50875AF0)
 I (..\system\inc\scheduler.h)(0x59FEC0C0)
 I (..\system\inc\device_timer.h)(0x59C77856)
-I (..\User_App\inc\SHM_Car.h)(0x69A6E092)
-I (..\User_Driver\inc\stm32f10x_Lora.h)(0x69E0512B)
+I (..\User_App\inc\SHM_Car.h)(0x6A20EC42)
+I (..\User_Driver\inc\stm32f10x_Lora.h)(0x6A20E608)
 I (..\User_Driver\inc\stm32f10x_scom.h)(0x69D715ED)
 I (E:\Snap\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\User_Driver\inc\stm32f10x_CarDrive.h)(0x69A6D803)
 I (..\User_Driver\inc\stm32f10x_Motor.h)(0x623534C8)
 I (..\User_Driver\inc\stm32f10x_PWMout.h)(0x61ECA19C)
-I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x69A7B198)
+I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x6A20EC63)
 I (..\User_Prog\inc\taskComm.h)(0x69A6E0C8)
 I (..\User_Prog\inc\taskDataPars.h)(0x69A6E1FC)
 I (..\User_Prog\inc\taskCarCtrl.h)(0x69A6F76C)
-F (..\User_Prog\src\taskCarCtrl.c)(0x69A6F8FA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\taskcarctrl.o --omf_browse ..\out\taskcarctrl.crf --depend ..\out\taskcarctrl.d)
+F (..\User_Prog\src\taskCarCtrl.c)(0x6A20E911)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\taskcarctrl.o --omf_browse ..\out\taskcarctrl.crf --depend ..\out\taskcarctrl.d)
 I (..\User_Prog\inc\taskCarCtrl.h)(0x69A6F76C)
 I (..\User_Driver\inc\stm32f10x_CarDrive.h)(0x69A6D803)
 I (..\User_Driver\inc\stm32f10x_Motor.h)(0x623534C8)
@@ -398,11 +398,11 @@ I (..\FWlib\inc\stm32f10x_tim.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_usart.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_wwdg.h)(0x50875AF0)
 I (..\FWlib\inc\misc.h)(0x50875AF0)
-I (..\User_App\inc\SHM_Car.h)(0x69A6E092)
-I (..\User_Driver\inc\stm32f10x_Lora.h)(0x69E0512B)
+I (..\User_App\inc\SHM_Car.h)(0x6A20EC42)
+I (..\User_Driver\inc\stm32f10x_Lora.h)(0x6A20E608)
 I (..\User_Driver\inc\stm32f10x_scom.h)(0x69D715ED)
-I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x69A7B198)
-F (..\User_Prog\src\taskComm.c)(0x69E088AF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\taskcomm.o --omf_browse ..\out\taskcomm.crf --depend ..\out\taskcomm.d)
+I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x6A20EC63)
+F (..\User_Prog\src\taskComm.c)(0x6A202845)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\taskcomm.o --omf_browse ..\out\taskcomm.crf --depend ..\out\taskcomm.d)
 I (..\User_Prog\inc\taskComm.h)(0x69A6E0C8)
 I (..\system\inc\time.h)(0x59C77CF0)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
@@ -434,18 +434,18 @@ I (..\FWlib\inc\stm32f10x_usart.h)(0x50875AF0)
 I (..\FWlib\inc\stm32f10x_wwdg.h)(0x50875AF0)
 I (..\FWlib\inc\misc.h)(0x50875AF0)
 I (..\system\inc\device_timer.h)(0x59C77856)
-I (..\User_App\inc\SHM_Car.h)(0x69A6E092)
-I (..\User_Driver\inc\stm32f10x_Lora.h)(0x69E0512B)
+I (..\User_App\inc\SHM_Car.h)(0x6A20EC42)
+I (..\User_Driver\inc\stm32f10x_Lora.h)(0x6A20E608)
 I (..\User_Driver\inc\stm32f10x_scom.h)(0x69D715ED)
 I (E:\Snap\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\User_Driver\inc\stm32f10x_CarDrive.h)(0x69A6D803)
 I (..\User_Driver\inc\stm32f10x_Motor.h)(0x623534C8)
 I (..\User_Driver\inc\stm32f10x_PWMout.h)(0x61ECA19C)
-I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x69A7B198)
-F (..\User_Prog\src\taskDataPars.c)(0x69E087E8)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\taskdatapars.o --omf_browse ..\out\taskdatapars.crf --depend ..\out\taskdatapars.d)
+I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x6A20EC63)
+F (..\User_Prog\src\taskDataPars.c)(0x6A20E8F6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\taskdatapars.o --omf_browse ..\out\taskdatapars.crf --depend ..\out\taskdatapars.d)
 I (..\User_Prog\inc\taskDataPars.h)(0x69A6E1FC)
-I (..\User_App\inc\SHM_Car.h)(0x69A6E092)
-I (..\User_Driver\inc\stm32f10x_Lora.h)(0x69E0512B)
+I (..\User_App\inc\SHM_Car.h)(0x6A20EC42)
+I (..\User_Driver\inc\stm32f10x_Lora.h)(0x6A20E608)
 I (..\User_Driver\inc\stm32f10x_scom.h)(0x69D715ED)
 I (..\Sys_Init\inc\stm32f10x.h)(0x53701214)
 I (..\Sys_Init\inc\core_cm3.h)(0x49D96948)
@@ -479,7 +479,7 @@ I (E:\Snap\Keil\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\User_Driver\inc\stm32f10x_CarDrive.h)(0x69A6D803)
 I (..\User_Driver\inc\stm32f10x_Motor.h)(0x623534C8)
 I (..\User_Driver\inc\stm32f10x_PWMout.h)(0x61ECA19C)
-I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x69A7B198)
+I (..\User_App\inc\stm32f10x_MapSCOMandSBUS.h)(0x6A20EC63)
 F (..\Sys_Init\src\core_cm3.c)(0x49D96948)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\core_cm3.o --omf_browse ..\out\core_cm3.crf --depend ..\out\core_cm3.d)
 I (E:\Snap\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\Sys_Init\src\system_stm32f10x.c)(0x5345055C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc-I.\RTE\_CAR-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Snap\Keil\ARM\CMSIS\Include-IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\out\system_stm32f10x.o --omf_browse ..\out\system_stm32f10x.crf --depend ..\out\system_stm32f10x.d)
