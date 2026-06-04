@@ -1,7 +1,10 @@
 ./vscode\*
 projects\*
-out\*
+out/*
 *.log
 *.o
 *.BAT
 *.lock
+out/main.o
+out/core_cm3.o
+out/
