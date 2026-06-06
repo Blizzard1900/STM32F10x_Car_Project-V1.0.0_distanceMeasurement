@@ -16,7 +16,7 @@
 #include "taskCarCtrl.h"
 #include "stm32f10x_CarDrive.h"
 #include "SHM_Car.h"
-
+#include "Estimate_Depth.h"
 
 
 
@@ -28,12 +28,15 @@ void  InitCarTask(void)
 	  CarDrive_Init(&CarInit);
 }
 
-
+// when depth sommer than 0.30m , can not forword
 void task_CtrlCar(void)
 {
 	  SHM_Param_Union              uCardata;
 
     Read_SHMCarParam(CARSPEED_TYPE, &uCardata);
+    // sent 10us pulse to trig(PE0)
+    Pluse_10us();
+    // wait scale finis
 
     CarDrive_Control(uCardata.carSpeed);		
 }

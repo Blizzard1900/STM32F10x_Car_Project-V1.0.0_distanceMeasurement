@@ -112,31 +112,31 @@ void CarDrive_Control(CAR_speed_Struct   speed)
 			  speed.corneringSpeed = -1.0f;		
 
     if(fabs(speed.straightSpeed) < DELTA_SPEED)
+	{
+		if(speed.corneringSpeed <= 0)
 		{
-		    if(speed.corneringSpeed <= 0)
-				{
-				    speedL = 0.0f;
-					  speedR = (-1.0f) * speed.corneringSpeed;				
-				}
-				else
-				{
-				    speedL = speed.corneringSpeed;
-					  speedR = 0.0f;					
-				}		
+		speedL = 0.0f;
+			speedR = (-1.0f) * speed.corneringSpeed;				
 		}
-    else
+		else
 		{
-				if(speed.corneringSpeed >= 0)
-				{
-						speedL = speed.straightSpeed;   
-						speedR = speed.straightSpeed*(1 - fabs(speed.corneringSpeed));
-				}
-				else
-				{
-						speedL = speed.straightSpeed*(1 - fabs(speed.corneringSpeed));   
-						speedR = speed.straightSpeed;				
-				}
-	  }
+			speedL = speed.corneringSpeed;
+			speedR = 0.0f;					
+		}		
+	}
+    else
+	{
+		if(speed.corneringSpeed >= 0)
+		{
+			speedL = speed.straightSpeed;   
+			speedR = speed.straightSpeed*(1 - fabs(speed.corneringSpeed));
+		}
+		else
+		{
+			speedL = speed.straightSpeed*(1 - fabs(speed.corneringSpeed));   
+			speedR = speed.straightSpeed;				
+		}
+	}
 		Motor_SpeedCtrl(Car.motorL,speedL);
 		Motor_SpeedCtrl(Car.motorR,speedR);		
 }	
@@ -148,14 +148,14 @@ void CarDrive_Control(CAR_speed_Struct   speed)
 -----------------------------------------------------------------------------------------------*/
 void CarDrive_SetSpeedMAX(float  speedMax)
 {
-	  if(speedMax > 1.0f)
-			  speedMax = 1.0f;		
-	  if(speedMax < 0.0f)
-			  speedMax = 0.0f;		
+	if(speedMax > 1.0f)
+		speedMax = 1.0f;		
+	if(speedMax < 0.0f)
+		speedMax = 0.0f;		
 
-		Car.maxSpeed = speedMax;
+	Car.maxSpeed = speedMax;
     Motor_SetMaxSpeed(Car.motorL,speedMax);
-		Motor_SetMaxSpeed(Car.motorR,speedMax);
+	Motor_SetMaxSpeed(Car.motorR,speedMax);
 }
 
 /*-----------------------------------------------------------------------------------------------
@@ -165,14 +165,14 @@ void CarDrive_SetSpeedMAX(float  speedMax)
 -----------------------------------------------------------------------------------------------*/
 void CarDrive_SetSpeedMIN(float  speedMin)
 {
-	  if(speedMin > 1.0f)
-			  speedMin = 1.0f;		
-	  if(speedMin < 0.0f)
-			  speedMin = 0.0f;		
+	if(speedMin > 1.0f)
+		speedMin = 1.0f;		
+	if(speedMin < 0.0f)
+		speedMin = 0.0f;		
 
-		Car.minSpeed = speedMin;
+	Car.minSpeed = speedMin;
     Motor_SetMinSpeed(Car.motorL,speedMin);
-		Motor_SetMinSpeed(Car.motorR,speedMin);
+	Motor_SetMinSpeed(Car.motorR,speedMin);
 }
 
 

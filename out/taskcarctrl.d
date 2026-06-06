@@ -37,3 +37,4 @@
 ..\out\taskcarctrl.o: ..\User_Driver\inc\stm32f10x_Lora.h
 ..\out\taskcarctrl.o: ..\User_Driver\inc\stm32f10x_scom.h
 ..\out\taskcarctrl.o: ..\User_App\inc\stm32f10x_MapSCOMandSBUS.h
+..\out\taskcarctrl.o: ..\User_Driver\inc\Estimate_Depth.h

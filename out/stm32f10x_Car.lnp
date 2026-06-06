@@ -7,6 +7,7 @@
 "..\out\stm32f10x_motor.o"
 "..\out\stm32f10x_pulsetime_it.o"
 "..\out\stm32f10x_pulsetime.o"
+"..\out\estimate_depth.o"
 "..\out\shm_car.o"
 "..\out\stm32f10x_mapscomandsbus.o"
 "..\out\main.o"

@@ -11,6 +11,7 @@ SET CPU_CLOCK=0x00B71B00
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_motor.__i"
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_pulsetime_it.__i"
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_pulsetime.__i"
+"E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\estimate_depth.__i"
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\shm_car.__i"
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_mapscomandsbus.__i"
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\main.__i"

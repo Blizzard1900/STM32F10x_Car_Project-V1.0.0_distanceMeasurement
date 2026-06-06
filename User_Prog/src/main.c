@@ -15,6 +15,10 @@
 #include "taskDataPars.h"
 #include "taskCarCtrl.h"
 
+#include "Estimate_Depth.h"
+
+#include "stm32f10x_flash.h"
+
 void RCC_Configuration(void);
 
 void task_1ms(void)
@@ -76,9 +80,10 @@ int main (void)
 	  SysTick_Configuration();
 
   	/* Init  */
-
+    App_HCSR04_Init(); // use TIM1 to estimate depth
 	  InitCommTask();
     InitCarTask();
+    // 
 	  /* write all pointers of tasks's funtion to scheduler */
 		allTasks.pDuty_1ms   = task_1ms;
 		allTasks.pDuty_2ms   = task_2ms;
@@ -97,6 +102,7 @@ int main (void)
 		{
 //      IWDG_Feed();
       Scheduler_Main_Loop();
+      
     }		 
 }
 

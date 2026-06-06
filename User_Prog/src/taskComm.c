@@ -77,7 +77,7 @@ void task_Comm(void)
 
 void  tsk_Comm_rxCallbackFun()
 {
-	  SHM_Param_Union   uCommData;
+	SHM_Param_Union   uCommData;
 	
     if(SUCCESS == Lora_ReadData(Lora1,&uCommData.commData)&&(uCommData.commData.Fresh == SET))
 		    Write_SHMCarParam(COMMDATA_TYPE, &uCommData);	

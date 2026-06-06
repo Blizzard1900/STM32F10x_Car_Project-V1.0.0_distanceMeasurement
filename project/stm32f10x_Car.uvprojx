@@ -420,6 +420,16 @@
               <FileType>1</FileType>
               <FilePath>..\User_Driver\src\stm32f10x_PulseTime.c</FilePath>
             </File>
+            <File>
+              <FileName>Estimate_Depth.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User_Driver\inc\Estimate_Depth.h</FilePath>
+            </File>
+            <File>
+              <FileName>Estimate_Depth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User_Driver\src\Estimate_Depth.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

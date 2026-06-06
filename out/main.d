@@ -41,3 +41,4 @@
 ..\out\main.o: ..\User_Prog\inc\taskComm.h
 ..\out\main.o: ..\User_Prog\inc\taskDataPars.h
 ..\out\main.o: ..\User_Prog\inc\taskCarCtrl.h
+..\out\main.o: ..\User_Driver\inc\Estimate_Depth.h
