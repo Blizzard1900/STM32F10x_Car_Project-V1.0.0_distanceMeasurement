@@ -160,6 +160,22 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
+          <LineNumber>360</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134219242</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\User_Driver\src\stm32f10x_Lora.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\stm32f10x_Car\../User_Driver/src/stm32f10x_Lora.c\360</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
           <LineNumber>32</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>134226416</Address>
@@ -249,6 +265,16 @@
           <count>14</count>
           <WinNumber>1</WinNumber>
           <ItemText>CAR_REG.commData</ItemText>
+        </Ww>
+        <Ww>
+          <count>15</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Car.motorL</ItemText>
+        </Ww>
+        <Ww>
+          <count>16</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Car.motorR</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -432,7 +458,7 @@
 
   <Group>
     <GroupName>USE_App</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -464,7 +490,7 @@
 
   <Group>
     <GroupName>USE_Prog</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
