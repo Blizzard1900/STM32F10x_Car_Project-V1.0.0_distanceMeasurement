@@ -1,4 +1,4 @@
-﻿#include "Estimate_Depth.h"
+#include "Estimate_Depth.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
 #include "stm32f10x_PulseTime.h"
@@ -32,7 +32,7 @@ void HCSR04_Callback(void)
     Write_SHMCarParam(DISTANCE_DATA_TYPE, &shm_data);
 }
 
-/* Initialize HC-SR04(???) Trigger (PE0) and Echo (PE1 via PulseTime) */
+/* Initialize HC-SR04 Trigger (PE0) and Echo (PE1 via PulseTime) */
 void App_HCSR04_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStruct;
