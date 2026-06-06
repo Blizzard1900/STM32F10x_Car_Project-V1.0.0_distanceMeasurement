@@ -34,9 +34,7 @@ void task_CtrlCar(void)
 	  SHM_Param_Union              uCardata;
 
     Read_SHMCarParam(CARSPEED_TYPE, &uCardata);
-    // sent 10us pulse to trig(PE0)
-    Pluse_10us();
-    // wait scale finis
+
 
     CarDrive_Control(uCardata.carSpeed);		
 }

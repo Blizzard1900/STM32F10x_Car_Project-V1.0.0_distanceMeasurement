@@ -61,7 +61,7 @@ void task_20ms(void)
 
 void task_50ms(void)
 {
-	
+    HCSR04_Trigger_10us();
 }
 
 void task_100ms(void)

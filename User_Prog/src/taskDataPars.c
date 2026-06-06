@@ -58,7 +58,8 @@
 
 void task_CommDataPars(void)
 {
-	  SHM_Param_Union                  uRCData,uCommStatus,uSBUSData,uCarData;
+	SHM_Param_Union uDistance;
+	SHM_Param_Union                  uRCData,uCommStatus,uSBUSData,uCarData;
 
     uRCData.commData.Fresh               = RESET;
 	  uCommStatus.commFail                 = RESET;
@@ -87,7 +88,20 @@ void task_CommDataPars(void)
 				{
 						uCarData.carSpeed.straightSpeed  /= 2;
 						uCarData.carSpeed.corneringSpeed /=2;
-				}						
+				}
+
+				/* Check distance limit from Shared Memory */
+
+				Read_SHMCarParam(DISTANCE_DATA_TYPE, &uDistance);
+				if(uDistance.distanceData.distanceLimitFlag == SET)
+				{
+						/* If straightSpeed > 0 (forward), set to 0. Backward (< 0) is allowed. */
+						if(uCarData.carSpeed.straightSpeed > 0.0f) {
+								uCarData.carSpeed.straightSpeed = 0.0f;
+						}
+						/* Turn speeds (left/right) are set to 0 */
+						uCarData.carSpeed.corneringSpeed = 0.0f;
+				}
      }
 		 
 		 Write_SHMCarParam(CARSPEED_TYPE, &uCarData);		
