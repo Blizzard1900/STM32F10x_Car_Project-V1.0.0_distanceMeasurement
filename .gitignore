@@ -74,3 +74,4 @@ out/taskdatapars.o
 out/time.o
 project/.vscode/uv4.log.lock
 *.hex
+project/stm32f10x_Car.uvguix.Flyin

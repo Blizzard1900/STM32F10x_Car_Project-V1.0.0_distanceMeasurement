@@ -66,6 +66,7 @@ void task_Comm(void)
 	else
 		cnt++;
 
+	
     if(cnt > COMMFAILURE_NUM)
 	{
 		cnt = COMMFAILURE_NUM;
