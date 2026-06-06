@@ -1,7 +1,0 @@
--c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\FWlib\inc -I ..\Sys_Init\inc -I ..\User_Driver\inc -I ..\User_Prog\inc -I ..\system\inc -I ..\User_App\inc
--I.\RTE\_CAR
--IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
--IE:\Snap\Keil\ARM\CMSIS\Include
--IE:\Snap\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0
--D__UVISION_VERSION="524" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
--o ..\out\stm32f10x_motor.o --omf_browse ..\out\stm32f10x_motor.crf --depend ..\out\stm32f10x_motor.d "..\User_Driver\src\stm32f10x_Motor.c"
