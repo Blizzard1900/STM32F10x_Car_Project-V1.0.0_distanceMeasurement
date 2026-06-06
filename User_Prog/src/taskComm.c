@@ -56,22 +56,22 @@ void task_Comm(void)
     SHM_Param_Union   uCommData,uCommStatus;	
     static  u8   cnt = 0;
 
-	  Read_SHMCarParam(COMMDATA_TYPE, &uCommData);	
+	Read_SHMCarParam(COMMDATA_TYPE, &uCommData);	
     if((SET == uCommData.commData.Fresh) &&(uCommData.commData.len == 25)&&(uCommData.commData.data[0] == 0x0F)&&(uCommData.commData.data[24] == 0x00))	
-		{		
-			  uCommStatus.commFail = RESET;
-		    Write_SHMCarParam(COMMSTUS_TYPE, &uCommStatus);				
-		    cnt = 0;
-		}
-		else
-			  cnt++;
+	{		
+		uCommStatus.commFail = RESET;
+		Write_SHMCarParam(COMMSTUS_TYPE, &uCommStatus);				
+		cnt = 0;
+	}
+	else
+		cnt++;
 
     if(cnt > COMMFAILURE_NUM)
-		{
-			  cnt = COMMFAILURE_NUM;
-        uCommStatus.commFail = SET;
-		    Write_SHMCarParam(COMMSTUS_TYPE, &uCommStatus);			
-		}
+	{
+		cnt = COMMFAILURE_NUM;
+		uCommStatus.commFail = SET;
+		Write_SHMCarParam(COMMSTUS_TYPE, &uCommStatus);			
+	}
 }
 
 

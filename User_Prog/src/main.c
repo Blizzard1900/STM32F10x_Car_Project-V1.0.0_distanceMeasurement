@@ -10,7 +10,7 @@
 #include "scheduler.h"
 #include "device_timer.h"
 #include "SHM_Car.h"
- 
+#include "stm32f10x_rcc.h"
 #include "taskComm.h"
 #include "taskDataPars.h"
 #include "taskCarCtrl.h"
@@ -80,7 +80,7 @@ int main (void)
 	  SysTick_Configuration();
 
   	/* Init  */
-    App_HCSR04_Init(); // use TIM1 to estimate depth
+    App_HCSR04_Init(); // inti voice module
 	  InitCommTask();
     InitCarTask();
     // 

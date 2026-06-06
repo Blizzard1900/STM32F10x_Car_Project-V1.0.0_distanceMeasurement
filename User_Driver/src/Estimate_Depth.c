@@ -1,4 +1,4 @@
-#include "Estimate_Depth.h"
+﻿#include "Estimate_Depth.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
 #include "stm32f10x_PulseTime.h"
@@ -32,7 +32,7 @@ void HCSR04_Callback(void)
     Write_SHMCarParam(DISTANCE_DATA_TYPE, &shm_data);
 }
 
-/* Initialize HC-SR04 Trigger (PE0) and Echo (PE1 via PulseTime) */
+/* Initialize HC-SR04(???) Trigger (PE0) and Echo (PE1 via PulseTime) */
 void App_HCSR04_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStruct;
@@ -42,7 +42,7 @@ void App_HCSR04_Init(void)
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE);
     GPIO_InitStruct.GPIO_Pin     = Drive_Pin;
     GPIO_InitStruct.GPIO_Mode    = GPIO_Mode_Out_PP;
-    GPIO_InitStruct.GPIO_Speed   = GPIO_Speed_50MHz;
+    GPIO_InitStruct.GPIO_Speed   = GPIO_Speed_2MHz;
     GPIO_Init(Drive_GPIO, &GPIO_InitStruct);
 
     /* 2. Init Echo Pin (PE1) using existing PulseTime1 driver */

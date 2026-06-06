@@ -23,14 +23,14 @@ void Init_SHMCarParam(void)
 {
 	  uint8_t    ii;
 	
-    CAR_REG.carSpeed.straightSpeed  = 0.0f;
-	  CAR_REG.carSpeed.corneringSpeed = 0.0f;
-    CAR_REG.commData.Fresh          = RESET;
-	  CAR_REG.commFail                = RESET;
+    CAR_REG.carSpeed.straightSpeed   = 0.0f;
+	CAR_REG.carSpeed.corneringSpeed  = 0.0f;
+    CAR_REG.commData.Fresh           = RESET;
+	CAR_REG.commFail                 = RESET;
 
-    CAR_REG.SBUSData.FlagByte       =0;
-	  for(ii = 0; ii<16;ii++)
-	      CAR_REG.SBUSData.Channel[ii] = 1024;	
+    CAR_REG.SBUSData.FlagByte        =0;
+	for(ii = 0; ii<16;ii++)
+		CAR_REG.SBUSData.Channel[ii] = 1024;	
 }	
 
 
@@ -55,7 +55,10 @@ ErrorStatus Write_SHMCarParam(SHM_WRTYPE_Enum data_type, SHM_Param_Union *param_
 			  break;			
 			  case CARSPEED_TYPE:
 			      CAR_REG.carSpeed =  param_union->carSpeed;   	
-			  break;			
+			  break;	
+			  case DISTANCE_DATA_TYPE:
+			  	  CAR_REG.distanceData = param_union->distanceData;
+			  break;		
         default:
         break;							
 		}
@@ -67,22 +70,29 @@ ErrorStatus Read_SHMCarParam(SHM_WRTYPE_Enum data_type, SHM_Param_Union *param_u
         return ERROR;
 
     switch(data_type)
-		{
-			  case COMMDATA_TYPE:
-			      param_union->commData =  CAR_REG.commData;   	
-			  break;
-			  case COMMSTUS_TYPE:
-			      param_union->commFail =  CAR_REG.commFail;   	
-			  break;				
-			  case SBUSDATA_TYPE:
-			      param_union->SBUSData = CAR_REG.SBUSData;   	
-			  break;			
-			  case CARSPEED_TYPE:
-			      param_union->carSpeed = CAR_REG.carSpeed;   	
-			  break;			
-        default:
-        break;							
-		}
+	{
+		case COMMDATA_TYPE:
+			param_union->commData =  CAR_REG.commData;   	
+		break;
+
+			case COMMSTUS_TYPE:
+			param_union->commFail =  CAR_REG.commFail;   	
+		break;	
+
+		case SBUSDATA_TYPE:
+			param_union->SBUSData = CAR_REG.SBUSData;   	
+		break;	
+
+		case CARSPEED_TYPE:
+			param_union->carSpeed = CAR_REG.carSpeed;
+		break;
+
+		case DISTANCE_DATA_TYPE:
+			param_union->distanceData = CAR_REG.distanceData;		  	
+		break;			
+	default:
+	break;							
+	}
     return SUCCESS;	
 }
 

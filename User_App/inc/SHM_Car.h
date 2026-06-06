@@ -39,7 +39,7 @@ typedef enum __SHM_WRTYPE_Enum
     SBUSDATA_TYPE,
     CARSPEED_TYPE,
     DISTANCE_DATA_TYPE,
-    BATTERY_VOLTAGE_TYPE
+     
 } SHM_WRTYPE_Enum; 
 
 

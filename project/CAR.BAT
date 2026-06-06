@@ -2,7 +2,7 @@ SET PATH=E:\Snap\Keil\ARM\ARMCC\Bin;C:\Windows\system32;C:\Windows;C:\Windows\Sy
 SET CPU_TYPE=STM32F103ZE
 SET CPU_VENDOR=STMicroelectronics
 SET UV2_TARGET=CAR
-SET CPU_CLOCK=0x00B71B00
+SET CPU_CLOCK=0x007A1200
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_lora.__i"
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_scom.__i"
 "E:\Snap\Keil\ARM\ARMCC\Bin\ArmCC" --Via "..\out\stm32f10x_scom_it.__i"
